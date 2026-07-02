@@ -119,6 +119,11 @@ export function TeamSection() {
             Quiénes somos
           </h2>
           <span className="mx-auto mt-4 block h-1 w-16 rounded bg-primary" />
+          <p className="mx-auto mt-6 max-w-3xl text-pretty leading-relaxed text-muted-foreground">
+            SERLAB, consultora integral dedicada al servicio de laboratorios, enfocada en la calidad y el cumplimiento
+            de las normas vigentes, brindando asesoramiento en diversas áreas con excelencia, calidad y satisfacción al
+            cliente.
+          </p>
         </div>
         <div className="grid items-start gap-10 md:grid-cols-3">
           {members.map((m) => (
