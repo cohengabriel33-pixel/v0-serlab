@@ -28,11 +28,11 @@ const members: Member[] = [
     ],
   },
   {
-    name: "Alejandro Cavassa",
-    image: "/member-2.png",
-    roles: ["Licenciado en Química", "Director de Calidad"],
+    name: "Lic. Química Alejandro Leonel Cavassa",
+    image: "/member-cavassa.png",
+    roles: ["Director de Calidad"],
     bio: [
-      "Químico especializado en Gestión de Calidad. Amplios conocimientos en diseño de estrategias para implementar y mejorar en forma continua sistemas de calidad bajo lineamientos de normativas GMP e ISO 9001.",
+      "Químico especializado en Gestión de Calidad. Amplios conocimientos en diseño de estrategias para implementar y mejorar de forma continua sistemas de calidad bajo lineamientos de normativas GMP e ISO 9001.",
       "Capacitador con posgrado docente y amplia experiencia en el rubro para formación en distintos niveles.",
     ],
   },
