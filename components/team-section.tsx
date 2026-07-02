@@ -21,7 +21,7 @@ type Member = {
 const members: Member[] = [
   {
     name: "Juan Carlos Farrán",
-    image: "/member-1.png",
+    image: "/member-farran.png",
     roles: ["Farmacéutico", "Director y Fundador de SerLAB"],
     bio: [
       "Profesional farmacéutico orientado a resultados con más de 25 años de experiencia y aumento de responsabilidades en áreas de Control de Calidad, Desarrollo Analítico, Aseguramiento de Calidad en la industria farmacéutica y afines. Amplio conocimiento técnico y experiencia dirigiendo áreas técnicas complejas y diversas, orientado a la calidad y mejora continua.",
@@ -38,7 +38,7 @@ const members: Member[] = [
   },
   {
     name: "Gonzalo X. Quesada",
-    image: "/member-3.png",
+    image: "/member-quesada.png",
     roles: ["Profesional farmacéutico"],
     bio: [
       "Formado y egresado de la Universidad Nacional de La Plata, con experiencia en sistemas de gestión de calidad mediante el ejercicio de direcciones técnicas de diversos ámbitos privados y en el sector de desarrollo de nuevos productos con especialización en el área analítica desarrollo, validaciones y estabilidades.",
