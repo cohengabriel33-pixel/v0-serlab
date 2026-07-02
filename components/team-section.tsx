@@ -78,7 +78,9 @@ function MemberCard({ member }: { member: Member }) {
       </button>
 
       <a
-        href="#"
+        href="https://www.linkedin.com/in/servicios-a-laboratorios-serlab-sl/"
+        target="_blank"
+        rel="noopener noreferrer"
         aria-label={`LinkedIn de ${member.name}`}
         className="mt-3 flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground transition-opacity hover:opacity-90"
       >

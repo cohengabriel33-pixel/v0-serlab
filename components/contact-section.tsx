@@ -23,15 +23,26 @@ export function ContactSection() {
           <ul className="mt-8 space-y-4">
             <li className="flex items-center gap-3">
               <Mail className="h-5 w-5 shrink-0" />
-              <span>info@serlabconsultora.com</span>
+              <a href="mailto:info@serlabconsultora.com" className="underline-offset-2 hover:underline">
+                info@serlabconsultora.com
+              </a>
             </li>
             <li className="flex items-center gap-3">
               <Phone className="h-5 w-5 shrink-0" />
-              <span>+54 9 11 0000 0000</span>
+              <a href="tel:+5491150078219" className="underline-offset-2 hover:underline">
+                +54 9 11 5007-8219
+              </a>
             </li>
             <li className="flex items-center gap-3">
               <WhatsappIcon className="h-5 w-5 shrink-0" />
-              <span>WhatsApp disponible</span>
+              <a
+                href="https://wa.me/5491150078219"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline-offset-2 hover:underline"
+              >
+                Chatea en WhatsApp
+              </a>
             </li>
             <li className="flex items-center gap-3">
               <MapPin className="h-5 w-5 shrink-0" />

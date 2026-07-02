@@ -80,21 +80,25 @@ export function SiteHeader() {
 
         <div className="hidden items-center gap-2 lg:flex">
           <a
-            href="#contacto"
+            href="mailto:info@serlabconsultora.com"
             aria-label="Email"
             className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground transition-opacity hover:opacity-90"
           >
             <Mail className="h-4 w-4" />
           </a>
           <a
-            href="https://wa.me/5491100000000"
+            href="https://wa.me/5491150078219"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="WhatsApp"
             className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground transition-opacity hover:opacity-90"
           >
             <WhatsappIcon className="h-4 w-4" />
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/servicios-a-laboratorios-serlab-sl/"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="LinkedIn"
             className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground transition-opacity hover:opacity-90"
           >
