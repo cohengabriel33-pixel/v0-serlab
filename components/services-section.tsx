@@ -20,7 +20,7 @@ export function ServicesSection() {
           <a
             key={panel.subtitle}
             href={panel.href}
-            className="group relative block aspect-[3/4] overflow-hidden rounded-sm"
+            className="group relative block aspect-[3/4] overflow-hidden rounded-3xl border-4 border-accent"
             aria-label={`${panel.title} ${panel.subtitle}`}
           >
             <div
