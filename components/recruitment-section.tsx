@@ -28,11 +28,11 @@ export function RecruitmentSection() {
     <section id="reclutamiento" className="bg-secondary/40 py-20">
       <div className="mx-auto max-w-6xl px-4">
         <div className="mb-12 text-center">
-          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-primary">SERLAB</p>
-          <h2 className="mt-2 font-heading text-3xl font-semibold uppercase tracking-wide text-foreground">
-            Reclutamiento
+          <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Sumate a SERLAB</p>
+          <h2 className="mt-3 font-heading text-4xl font-light text-foreground sm:text-5xl">
+            <span className="italic text-primary">Reclutamiento</span>
           </h2>
-          <span className="mx-auto mt-4 block h-1 w-16 rounded bg-primary" />
+          <span className="mx-auto mt-5 block h-px w-20 bg-primary/50" />
           <p className="mx-auto mt-6 max-w-3xl text-pretty leading-relaxed text-muted-foreground">
             ¿Querés formar parte de nuestro equipo? En SERLAB buscamos profesionales comprometidos con la calidad y la
             mejora continua. Sumate a una consultora integral en constante crecimiento y desarrollá tu carrera junto a

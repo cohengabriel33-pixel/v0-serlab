@@ -1,14 +1,15 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
-import { Oswald, Open_Sans } from 'next/font/google'
+import { Fraunces, Inter } from 'next/font/google'
 import './globals.css'
 
-const oswald = Oswald({
+const fraunces = Fraunces({
   variable: '--font-heading',
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
 })
-const openSans = Open_Sans({
+const inter = Inter({
   variable: '--font-sans',
   subsets: ['latin'],
 })
@@ -43,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es" className={`${oswald.variable} ${openSans.variable} bg-background`}>
+    <html lang="es" className={`${fraunces.variable} ${inter.variable} bg-background`}>
       <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

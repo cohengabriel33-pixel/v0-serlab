@@ -115,10 +115,11 @@ export function TeamSection() {
       <div className="absolute inset-0 bg-background/80" aria-hidden="true" />
       <div className="relative mx-auto max-w-6xl px-4">
         <div className="mb-12 text-center">
-          <h2 className="font-heading text-3xl font-semibold uppercase tracking-wide text-foreground">
-            Quiénes somos
+          <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Nuestro equipo</p>
+          <h2 className="mt-3 font-heading text-4xl font-light text-foreground sm:text-5xl">
+            Quiénes <span className="italic text-primary">somos</span>
           </h2>
-          <span className="mx-auto mt-4 block h-1 w-16 rounded bg-primary" />
+          <span className="mx-auto mt-5 block h-px w-20 bg-primary/50" />
           <p className="mx-auto mt-6 max-w-3xl text-pretty leading-relaxed text-muted-foreground">
             SERLAB, consultora integral dedicada al servicio de laboratorios, enfocada en la calidad y el cumplimiento
             de las normas vigentes, brindando asesoramiento en diversas áreas con excelencia, calidad y satisfacción al

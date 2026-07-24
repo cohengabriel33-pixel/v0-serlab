@@ -7,14 +7,15 @@ const panels = [
 export function ServicesSection() {
   return (
     <section id="servicios" className="bg-foreground">
-      <div className="bg-primary py-12 text-center">
-        <h2 className="font-heading text-3xl font-semibold uppercase tracking-wide text-primary-foreground">
-          Servicios
+      <div className="py-14 text-center">
+        <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Lo que hacemos</p>
+        <h2 className="mt-3 font-heading text-4xl font-light text-background sm:text-5xl">
+          Nuestros <span className="italic text-accent">servicios</span>
         </h2>
-        <span className="mx-auto mt-4 block h-1 w-16 rounded bg-primary-foreground/70" />
+        <span className="mx-auto mt-5 block h-px w-20 bg-background/40" />
       </div>
 
-      <div className="mx-auto grid max-w-6xl gap-4 px-4 py-12 sm:grid-cols-2 md:grid-cols-3">
+      <div className="mx-auto grid max-w-6xl gap-4 px-4 pb-16 sm:grid-cols-2 md:grid-cols-3">
         {panels.map((panel) => (
           <a
             key={panel.subtitle}

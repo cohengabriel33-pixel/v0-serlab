@@ -40,10 +40,10 @@ export function CampusSection() {
               <GraduationCap className="h-4 w-4" />
               Servicios educativos
             </span>
-            <h2 className="mt-5 font-heading text-3xl font-semibold uppercase tracking-wide text-foreground text-balance sm:text-4xl">
-              Campus Virtual SERLAB
+            <h2 className="mt-5 font-heading text-4xl font-light text-foreground text-balance sm:text-5xl">
+              Campus <span className="italic text-primary">Virtual</span> SERLAB
             </h2>
-            <span className="mt-4 block h-1 w-16 rounded bg-primary" />
+            <span className="mt-5 block h-px w-20 bg-primary/50" />
             <p className="mt-6 max-w-xl text-pretty leading-relaxed text-muted-foreground">
               Accedé a nuestra plataforma educativa con cursos, capacitaciones y material especializado para
               profesionales de laboratorio. Formación continua orientada a la calidad y al cumplimiento normativo.
