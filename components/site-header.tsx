@@ -16,11 +16,11 @@ const nav = [
     ],
   },
   {
-    label: "Contacto",
-    href: "#contacto",
+    label: "Reclutamiento",
+    href: "#reclutamiento",
     children: [
-      { label: "Contactanos", href: "#contacto" },
-      { label: "Trabaja con nosotros", href: "#contacto" },
+      { label: "Trabajá con nosotros", href: "#reclutamiento" },
+      { label: "Postulate", href: "#reclutamiento" },
     ],
   },
 ]
