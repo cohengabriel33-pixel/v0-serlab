@@ -128,3 +128,64 @@
     @apply font-sans;
   }
 }
+
+@keyframes campus-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes campus-pulse-ring {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+  70% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes campus-drift {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(30px, -20px) scale(1.1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes campus-shine {
+  0% {
+    transform: translateX(-120%) skewX(-20deg);
+  }
+  60%,
+  100% {
+    transform: translateX(220%) skewX(-20deg);
+  }
+}
+
+.animate-campus-float {
+  animation: campus-float 6s ease-in-out infinite;
+}
+
+.animate-campus-drift {
+  animation: campus-drift 14s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-campus-float,
+  .animate-campus-drift {
+    animation: none;
+  }
+}

@@ -2,6 +2,7 @@ import { SiteHeader } from "@/components/site-header"
 import { Hero } from "@/components/hero"
 import { TeamSection } from "@/components/team-section"
 import { ServicesSection } from "@/components/services-section"
+import { CampusSection } from "@/components/campus-section"
 import { ClientsSection } from "@/components/clients-section"
 import { RecruitmentSection } from "@/components/recruitment-section"
 import { SiteFooter } from "@/components/site-footer"
@@ -14,6 +15,7 @@ export default function Page() {
       <Hero />
       <TeamSection />
       <ServicesSection />
+      <CampusSection />
       <ClientsSection />
       <RecruitmentSection />
       <SiteFooter />
