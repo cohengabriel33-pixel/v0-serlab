@@ -3,23 +3,23 @@ import { Briefcase, GraduationCap, TrendingUp, Users } from "lucide-react"
 const benefits = [
   {
     icon: TrendingUp,
-    title: "Desarrollo profesional",
-    text: "Crecimiento continuo en un entorno técnico exigente y de alto nivel.",
+    title: "Búsqueda especializada",
+    text: "Reclutamos perfiles técnicos de la industria farmacéutica: producción, calidad, asuntos regulatorios, microbiología.",
   },
   {
     icon: GraduationCap,
-    title: "Capacitación constante",
-    text: "Formación permanente en normativas GMP, ISO 9001 y buenas prácticas.",
+    title: "Eventual o permanente",
+    text: "Cubrimos una vacante puntual o una búsqueda para incorporación definitiva, según lo que necesite tu empresa.",
   },
   {
     icon: Users,
-    title: "Equipo de expertos",
-    text: "Trabajá junto a profesionales con amplia trayectoria en la industria.",
+    title: "Evaluación técnica real",
+    text: "Los candidatos pasan por profesionales con trayectoria en la industria, no solo por un filtro de RRHH genérico.",
   },
   {
     icon: Briefcase,
-    title: "Proyectos diversos",
-    text: "Participá en desafíos variados para laboratorios e industria farmacéutica.",
+    title: "Proceso ágil",
+    text: "Aceleramos los tiempos de búsqueda con una base de contactos ya calificada en el sector.",
   },
 ]
 
@@ -28,15 +28,14 @@ export function RecruitmentSection() {
     <section id="reclutamiento" className="bg-secondary/40 py-20">
       <div className="mx-auto max-w-6xl px-4">
         <div className="mb-12 text-center">
-          <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Sumate a SERLAB</p>
-          <h2 className="mt-3 font-heading text-4xl font-light text-foreground sm:text-5xl">
-            <span className="italic text-primary">Reclutamiento</span>
+          <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Servicio para empresas</p>
+          <h2 className="mt-3 font-heading text-4xl font-light text-foreground sm:text-5xl text-balance">
+            <span className="italic text-primary">¿Tu empresa necesita cubrir una posición?</span>
           </h2>
           <span className="mx-auto mt-5 block h-px w-20 bg-primary/50" />
           <p className="mx-auto mt-6 max-w-3xl text-pretty leading-relaxed text-muted-foreground">
-            ¿Querés formar parte de nuestro equipo? En SERLAB buscamos profesionales comprometidos con la calidad y la
-            mejora continua. Sumate a una consultora integral en constante crecimiento y desarrollá tu carrera junto a
-            nosotros.
+            En SERLAB ofrecemos servicios de búsqueda y selección de personal para la industria farmacéutica, tanto para
+            necesidades eventuales como para incorporaciones permanentes.
           </p>
         </div>
 
@@ -53,9 +52,9 @@ export function RecruitmentSection() {
         </div>
 
         <div className="mx-auto max-w-2xl rounded-md bg-background p-8 shadow-xl">
-          <h3 className="text-center font-heading text-2xl font-semibold text-foreground">Postulate</h3>
+          <h3 className="text-center font-heading text-2xl font-semibold text-foreground">Sumá tu CV a nuestra base</h3>
           <p className="mt-2 text-center text-sm text-muted-foreground">
-            Completá el formulario y adjuntá tu CV. Nos pondremos en contacto con vos.
+            ¿Buscás oportunidades laborales en la industria? Dejanos tu CV y te tenemos en cuenta para futuras búsquedas.
           </p>
           <form className="mt-8 grid gap-4">
             <div className="grid gap-4 sm:grid-cols-2">

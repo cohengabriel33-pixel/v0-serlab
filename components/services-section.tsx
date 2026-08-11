@@ -37,7 +37,7 @@ export function ServicesSection() {
                 {panel.title} <span className="italic text-accent">{panel.subtitle}</span>
               </p>
               <p className="mt-2 max-w-[18rem] text-sm leading-relaxed text-background/80">
-                {panel.subtitle === "Analíticos" && "Trabajo con matraces en laboratorio."}
+                {panel.subtitle === "Analíticos" && "Trabajo con matrices en laboratorio."}
                 {panel.subtitle === "Regulatorios" && "Escritura y documentación técnica."}
                 {panel.subtitle === "Especiales" && "Planos, instrumentos y planificación."}
               </p>
