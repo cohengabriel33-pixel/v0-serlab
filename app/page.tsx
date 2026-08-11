@@ -5,6 +5,7 @@ import { ServicesSection } from "@/components/services-section"
 import { CampusSection } from "@/components/campus-section"
 import { ClientsSection } from "@/components/clients-section"
 import { RecruitmentSection } from "@/components/recruitment-section"
+import { CvSection } from "@/components/cv-section"
 import { SiteFooter } from "@/components/site-footer"
 import { WhatsappFloat } from "@/components/whatsapp-float"
 
@@ -15,9 +16,10 @@ export default function Page() {
       <Hero />
       <TeamSection />
       <ServicesSection />
+      <RecruitmentSection />
       <ClientsSection />
       <CampusSection />
-      <RecruitmentSection />
+      <CvSection />
       <SiteFooter />
       <WhatsappFloat />
     </main>
