@@ -1,7 +1,7 @@
 const panels = [
-  { title: "Servicios", subtitle: "Analíticos", position: "5%", href: "#contacto" },
-  { title: "Servicios", subtitle: "Regulatorios", position: "50%", href: "#contacto" },
-  { title: "Servicios", subtitle: "Especiales", position: "95%", href: "#contacto" },
+  { title: "Servicios", subtitle: "Analíticos", image: "/service-lab.jpeg", href: "#reclutamiento" },
+  { title: "Servicios", subtitle: "Regulatorios", image: "/service-writing.jpeg", href: "#reclutamiento" },
+  { title: "Servicios", subtitle: "Especiales", image: "/service-plans.jpeg", href: "#reclutamiento" },
 ]
 
 export function ServicesSection() {
@@ -26,9 +26,9 @@ export function ServicesSection() {
             <div
               className="absolute inset-0 bg-no-repeat transition-transform duration-500 group-hover:scale-105"
               style={{
-                backgroundImage: "url('/servicios.jpeg')",
-                backgroundSize: "380% 118%",
-                backgroundPosition: `${panel.position} center`,
+                backgroundImage: `url('${panel.image}')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
               }}
               aria-hidden="true"
             />

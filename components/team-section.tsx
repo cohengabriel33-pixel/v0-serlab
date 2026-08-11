@@ -28,7 +28,7 @@ const members: Member[] = [
     ],
   },
   {
-    name: "Lic. Química Alejandro Leonel Cavassa",
+    name: "Alejandro Leonel Cavassa",
     image: "/member-cavassa.png",
     roles: ["Director de Calidad"],
     bio: [
