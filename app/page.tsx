@@ -15,9 +15,9 @@ export default function Page() {
       <Hero />
       <TeamSection />
       <ServicesSection />
-      <RecruitmentSection />
       <ClientsSection />
       <CampusSection />
+      <RecruitmentSection />
       <SiteFooter />
       <WhatsappFloat />
     </main>

@@ -3,7 +3,6 @@ import Image from "next/image"
 const logos = [
   ["Eurofarma", "/clients-eurofarma.png"],
   ["Knight", "/clients-knight.jpg"],
-  ["Biotoscana", "/clients-biotoscana.jpg"],
   ["Deltabiotech", "/clients-deltabiotech.jpg"],
   ["Savant", "/clients-savant.jpg"],
   ["Logindoor", "/clients-logindoor.png"],
