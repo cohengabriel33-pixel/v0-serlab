@@ -165,28 +165,7 @@
   }
 }
 
-@keyframes client-marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes campus-shine {
-  0% {
-    transform: translateX(-120%) skewX(-20deg);
-  }
-  60%,
-  100% {
-    transform: translateX(220%) skewX(-20deg);
-  }
-}
-
-.animate-client-marquee {
-  animation: client-marquee 58s linear infinite;
-}
+/* Elimina las declaraciones duplicadas y mal escritas, y deja solo esto: */
 
 @keyframes client-marquee {
   0% {
@@ -199,6 +178,16 @@
 
 .animate-client-marquee {
   animation: client-marquee 25s linear infinite;
+}
+
+@keyframes campus-shine {
+  0% {
+    transform: translateX(-120%) skewX(-20deg);
+  }
+  60%,
+  100% {
+    transform: translateX(220%) skewX(-20deg);
+  }
 }
 
 .animate-campus-float {
