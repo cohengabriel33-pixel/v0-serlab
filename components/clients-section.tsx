@@ -46,7 +46,7 @@ export function ClientsSection() {
         </p>
       </div>
       <div className="relative mt-12 overflow-hidden before:absolute before:inset-y-0 before:left-0 before:z-10 before:w-24 before:bg-gradient-to-r before:from-background before:to-transparent after:absolute after:inset-y-0 after:right-0 after:z-10 after:w-24 after:bg-gradient-to-l after:from-background after:to-transparent">
-        <div className="flex w-max animate-client-marquee hover:[animation-play-state:paused]">
+        <div className="animate-marquee-infinite">
           <LogoSet />
           <LogoSet />
         </div>
