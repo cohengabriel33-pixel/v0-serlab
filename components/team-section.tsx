@@ -55,7 +55,7 @@ function Hexagon({ image, name }: { image: string; name: string }) {
       <img
         src={image || "/placeholder.svg"}
         alt={`Foto de ${name}`}
-        className={`h-full w-full object-cover ${name === "Alejandro Leonel Cavassa" ? "grayscale contrast-[0.96]" : ""}`}
+        className="h-full w-full object-cover"
         style={{ clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)" }}
       />
     </div>
