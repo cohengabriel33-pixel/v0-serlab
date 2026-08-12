@@ -21,12 +21,10 @@ const logos = [
   ["Biogénesis Bagó", "/clients-bago.png"],
 ] as const
 
-function LogoSet({ includeKnight = true }: { includeKnight?: boolean }) {
-  const visibleLogos = includeKnight ? logos : logos.filter(([name]) => name !== "Knight")
-
+function LogoSet() {
   return (
-    <div className="flex shrink-0 items-center gap-6 pr-6">
-      {visibleLogos.map(([name, src]) => (
+    <div className="flex shrink-0 items-center gap-6 pr-6" aria-hidden="true">
+      {logos.map(([name, src]) => (
         <div key={name} className="flex h-28 w-48 shrink-0 items-center justify-center rounded-2xl border border-border bg-card px-5 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-md">
           <Image src={src} alt={`Logo de ${name}`} width={180} height={100} className="max-h-20 w-auto max-w-full object-contain mix-blend-multiply dark:mix-blend-normal" />
         </div>
@@ -50,7 +48,7 @@ export function ClientsSection() {
       <div className="relative mt-12 overflow-hidden before:absolute before:inset-y-0 before:left-0 before:z-10 before:w-24 before:bg-gradient-to-r before:from-background before:to-transparent after:absolute after:inset-y-0 after:right-0 after:z-10 after:w-24 after:bg-gradient-to-l after:from-background after:to-transparent">
         <div className="flex w-max animate-client-marquee hover:[animation-play-state:paused]">
           <LogoSet />
-          <LogoSet includeKnight={false} />
+          <LogoSet />
         </div>
       </div>
     </section>

@@ -177,7 +177,8 @@
 }
 
 .animate-client-marquee {
-  animation: client-marquee 25s linear infinite;
+  animation: client-marquee 42s linear infinite;
+  will-change: transform;
 }
 
 @keyframes campus-shine {
