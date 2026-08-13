@@ -19,7 +19,7 @@ const nav = [
     label: "Reclutamiento",
     href: "#reclutamiento",
     children: [
-      { label: "Trabaja con nosotros", href: "#para-empresas" },
+      { label: "Para empresas", href: "#para-empresas" },
       { label: "Base de CV", href: "#base-de-cv" },
     ],
   },
