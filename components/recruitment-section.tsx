@@ -1,7 +1,7 @@
 "use client"
 
 import { Briefcase, GraduationCap, TrendingUp, Users } from "lucide-react"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const benefits = [
   { icon: TrendingUp, title: "Búsqueda especializada", text: "Reclutamos perfiles técnicos de la industria farmacéutica: producción, calidad, asuntos regulatorios, microbiología." },
@@ -30,6 +30,15 @@ function CvForm() {
 
 export function RecruitmentSection() {
   const [activeTab, setActiveTab] = useState<"empresas" | "cv">("empresas")
+
+  useEffect(() => {
+    const syncTabWithHash = () => {
+      setActiveTab(window.location.hash === "#base-de-cv" ? "cv" : "empresas")
+    }
+    syncTabWithHash()
+    window.addEventListener("hashchange", syncTabWithHash)
+    return () => window.removeEventListener("hashchange", syncTabWithHash)
+  }, [])
 
   const selectTab = (tab: "empresas" | "cv") => {
     setActiveTab(tab)
