@@ -31,16 +31,24 @@ function CvForm() {
 export function RecruitmentSection() {
   const [activeTab, setActiveTab] = useState<"empresas" | "cv">("empresas")
 
+  const selectTab = (tab: "empresas" | "cv") => {
+    setActiveTab(tab)
+    window.history.replaceState(null, "", tab === "cv" ? "#base-de-cv" : "#para-empresas")
+    requestAnimationFrame(() => {
+      document.getElementById(tab === "cv" ? "base-de-cv" : "para-empresas")?.scrollIntoView({ behavior: "smooth", block: "start" })
+    })
+  }
+
   return (
     <section id="servicio-empresas" className="bg-secondary/40 py-20">
       <div className="mx-auto max-w-6xl px-4">
         <div className="mx-auto mb-12 flex max-w-xl rounded-sm border border-border bg-background p-1" role="tablist" aria-label="Opciones de SERLAB">
-          <button type="button" role="tab" aria-selected={activeTab === "empresas"} onClick={() => setActiveTab("empresas")} className={`flex-1 rounded-sm px-4 py-3 text-sm font-semibold transition-colors ${activeTab === "empresas" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}>Para Empresas</button>
-          <button type="button" role="tab" aria-selected={activeTab === "cv"} onClick={() => setActiveTab("cv")} className={`flex-1 rounded-sm px-4 py-3 text-sm font-semibold transition-colors ${activeTab === "cv" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}>Base de CV</button>
+          <button type="button" role="tab" aria-selected={activeTab === "empresas"} onClick={() => selectTab("empresas")} className={`flex-1 rounded-sm px-4 py-3 text-sm font-semibold transition-colors ${activeTab === "empresas" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}>para empresas</button>
+          <button type="button" role="tab" aria-selected={activeTab === "cv"} onClick={() => selectTab("cv")} className={`flex-1 rounded-sm px-4 py-3 text-sm font-semibold transition-colors ${activeTab === "cv" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}>Base de CV</button>
         </div>
 
         {activeTab === "empresas" ? (
-          <div role="tabpanel" aria-label="Para Empresas">
+          <div id="para-empresas" role="tabpanel" aria-label="Para empresas">
             <div className="mb-12 text-center">
               <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Servicio para empresas</p>
               <h2 className="mt-3 text-balance font-heading text-4xl font-light text-foreground sm:text-5xl"><span className="italic text-primary">¿Tu empresa necesita cubrir una posición?</span></h2>
@@ -53,7 +61,7 @@ export function RecruitmentSection() {
             </div>
           </div>
         ) : (
-          <div role="tabpanel" aria-label="Base de CV" className="mx-auto max-w-2xl rounded-md bg-background p-8 shadow-xl">
+          <div id="base-de-cv" role="tabpanel" aria-label="Base de CV" className="mx-auto max-w-2xl rounded-md bg-background p-8 shadow-xl">
             <p className="text-center text-xs font-medium uppercase tracking-[0.25em] text-primary">Oportunidades laborales</p>
             <h2 className="mt-3 text-center font-heading text-3xl font-semibold text-foreground">Sumá tu CV a nuestra base</h2>
             <p className="mt-2 text-center text-sm leading-relaxed text-muted-foreground">¿Buscás oportunidades laborales en la industria? Dejanos tu CV y te tenemos en cuenta para futuras búsquedas.</p>
