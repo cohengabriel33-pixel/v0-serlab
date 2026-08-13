@@ -52,7 +52,7 @@ export function RecruitmentSection() {
     <section id="servicio-empresas" className="bg-secondary/40 py-20">
       <div className="mx-auto max-w-6xl px-4">
         <div className="mx-auto mb-12 flex max-w-xl rounded-sm border border-border bg-background p-1" role="tablist" aria-label="Opciones de SERLAB">
-          <button type="button" role="tab" aria-selected={activeTab === "empresas"} onClick={() => selectTab("empresas")} className={`flex-1 rounded-sm px-4 py-3 text-sm font-semibold transition-colors ${activeTab === "empresas" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}>para empresas</button>
+          <button type="button" role="tab" aria-selected={activeTab === "empresas"} onClick={() => selectTab("empresas")} className={`flex-1 rounded-sm px-4 py-3 text-sm font-semibold transition-colors ${activeTab === "empresas" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}>Para empresas</button>
           <button type="button" role="tab" aria-selected={activeTab === "cv"} onClick={() => selectTab("cv")} className={`flex-1 rounded-sm px-4 py-3 text-sm font-semibold transition-colors ${activeTab === "cv" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}>Base de CV</button>
         </div>
 
