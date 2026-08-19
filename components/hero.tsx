@@ -20,7 +20,7 @@ export function Hero() {
             Bienvenidos a SERLAB Consultora
           </p>
           <h1 className="mt-7 text-balance font-heading text-4xl font-light leading-[1.05] text-background sm:text-5xl md:text-6xl">
-            Servicio integral de <span className="italic text-accent">consultoría</span> para la industria
+            Servicio <span className="text-accent">Integral</span> para la <span className="text-accent">Industria</span>
           </h1>
           <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-background/85">
             Calidad, cumplimiento normativo y excelencia analítica para laboratorios farmacéuticos y afines.
