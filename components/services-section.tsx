@@ -44,7 +44,7 @@ export function ServicesSection() {
       <div className="py-14 text-center">
         <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Lo que hacemos</p>
         <h2 className="mt-3 font-heading text-4xl font-light text-background sm:text-5xl text-balance">
-          Servicio <span className="text-primary">integral</span> para la <span className="text-primary">Industria</span>
+          Servicios
         </h2>
         <span className="mx-auto mt-5 block h-px w-20 bg-background/40" />
       </div>
