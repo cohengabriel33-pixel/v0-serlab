@@ -51,7 +51,7 @@ export function RecruitmentSection() {
   return (
     <section id="servicio-empresas" className="bg-secondary/40 py-20">
       <div className="mx-auto max-w-6xl px-4">
-        <div className="mx-auto mb-12 flex max-w-xl rounded-sm border border-border bg-background p-1" role="tablist" aria-label="Opciones de SERLAB">
+        <div className="mx-auto mb-12 flex max-w-xl rounded-sm border border-border bg-background p-1" role="tablist" aria-label="Opciones de Serlab">
           <button type="button" role="tab" aria-selected={activeTab === "empresas"} onClick={() => selectTab("empresas")} className={`flex-1 rounded-sm px-4 py-3 text-sm font-semibold transition-colors ${activeTab === "empresas" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}>Para empresas</button>
           <button type="button" role="tab" aria-selected={activeTab === "cv"} onClick={() => selectTab("cv")} className={`flex-1 rounded-sm px-4 py-3 text-sm font-semibold transition-colors ${activeTab === "cv" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}>Base de CV</button>
         </div>
@@ -62,7 +62,7 @@ export function RecruitmentSection() {
               <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Servicio para empresas</p>
               <h2 className="mt-3 text-balance font-heading text-4xl font-light text-foreground sm:text-5xl"><span className="italic text-primary">¿Tu empresa necesita cubrir una posición?</span></h2>
               <span className="mx-auto mt-5 block h-px w-20 bg-primary/50" />
-              <p className="mx-auto mt-6 max-w-3xl text-pretty leading-relaxed text-muted-foreground">En SERLAB ofrecemos servicios de búsqueda y selección de personal para la industria farmacéutica, tanto para necesidades eventuales como para incorporaciones permanentes.</p>
+              <p className="mx-auto mt-6 max-w-3xl text-pretty leading-relaxed text-muted-foreground">En Serlab ofrecemos servicios de búsqueda y selección de personal para la industria farmacéutica, tanto para necesidades eventuales como para incorporaciones permanentes.</p>
               <a href="mailto:info@serlabconsultora.com?subject=Consulta%20por%20búsqueda%20de%20personal" className="mt-7 inline-flex rounded-sm bg-primary px-6 py-3 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-opacity hover:opacity-90">Consultar por búsquedas</a>
             </div>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

@@ -41,7 +41,7 @@ export function CampusSection() {
               Servicios educativos
             </span>
             <h2 className="mt-5 font-heading text-4xl font-light text-foreground text-balance sm:text-5xl">
-              Campus <span className="italic text-primary">Virtual</span> SERLAB
+              Campus <span className="italic text-primary">Virtual</span> Serlab
             </h2>
             <span className="mt-5 block h-px w-20 bg-primary/50" />
             <p className="mt-6 max-w-xl text-pretty leading-relaxed text-muted-foreground">
@@ -80,7 +80,7 @@ export function CampusSection() {
               href="https://serlab.educativa.org/acceso.cgi"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Ingresar al Campus Virtual SERLAB"
+              aria-label="Ingresar al Campus Virtual Serlab"
               className="animate-campus-float group relative block w-full max-w-sm"
             >
               {/* pulse rings */}
@@ -98,7 +98,7 @@ export function CampusSection() {
                   serlab.educativa.org
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  Plataforma educativa oficial de SERLAB
+                  Plataforma educativa oficial de Serlab
                 </p>
                 <span className="mt-6 inline-flex items-center gap-2 font-heading text-sm font-semibold uppercase tracking-wide text-primary">
                   Acceder ahora

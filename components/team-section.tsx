@@ -121,7 +121,7 @@ export function TeamSection() {
           </h2>
           <span className="mx-auto mt-5 block h-px w-20 bg-primary/50" />
           <p className="mx-auto mt-6 max-w-3xl text-pretty leading-relaxed text-muted-foreground">
-            SERLAB, consultora integral dedicada al servicio de laboratorios, enfocada en la calidad y el cumplimiento
+            Serlab, consultora integral dedicada al servicio de laboratorios, enfocada en la calidad y el cumplimiento
             de las normas vigentes, brindando asesoramiento en diversas áreas con excelencia, calidad y satisfacción al
             cliente.
           </p>

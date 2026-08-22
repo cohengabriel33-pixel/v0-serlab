@@ -63,7 +63,7 @@ export function ServicesSection() {
       </div>
 
       <div className="mx-auto max-w-6xl px-4 pb-16">
-        <div className="grid gap-4 md:grid-cols-3" role="tablist" aria-label="Servicios de SERLAB">
+        <div className="grid gap-4 md:grid-cols-3" role="tablist" aria-label="Servicios de Serlab">
           {panels.map((panel, index) => {
             const isActive = activeService === index
             return (

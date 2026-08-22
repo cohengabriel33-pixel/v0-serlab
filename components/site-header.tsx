@@ -47,7 +47,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 lg:px-6">
-        <a href="#inicio" className="shrink-0" aria-label="SERLAB inicio">
+        <a href="#inicio" className="shrink-0" aria-label="Serlab inicio">
           <Logo />
         </a>
 

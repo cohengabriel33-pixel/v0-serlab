@@ -4,7 +4,7 @@ export function Logo({ className = "" }: { className?: string }) {
   return (
     <Image
       src="/serlab-logo.png"
-      alt="SERLAB Consultora"
+      alt="Serlab Consultora"
       width={120}
       height={120}
       priority

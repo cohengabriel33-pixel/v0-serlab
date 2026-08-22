@@ -10,7 +10,7 @@ export function SiteFooter() {
             Aviso legal
           </a>
         </p>
-        <p className="text-background/60">SERLAB Consultora</p>
+        <p className="text-background/60">Serlab Consultora</p>
       </div>
     </footer>
   )

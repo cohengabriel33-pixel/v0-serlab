@@ -15,9 +15,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'SERLAB - Servicio de Consultoría Integral para la Industria',
+  title: 'Serlab - Servicio de Consultoría Integral para la Industria',
   description:
-    'SERLAB Consultora ofrece servicios analíticos, regulatorios y educativos para la industria farmacéutica y afines.',
+    'Serlab Consultora ofrece servicios analíticos, regulatorios y educativos para la industria farmacéutica y afines.',
   generator: 'v0.app',
   icons: {
     icon: [

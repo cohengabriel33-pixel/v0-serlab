@@ -17,7 +17,7 @@ export function Hero() {
       <div className="relative z-10 mx-auto w-full max-w-6xl px-4 py-24 lg:px-6">
         <div className="max-w-2xl">
           <p className="inline-flex items-center gap-2 rounded-full border border-background/25 bg-background/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.25em] text-background backdrop-blur">
-            Bienvenidos a SERLAB Consultora
+            Bienvenidos a Serlab Consultora
           </p>
           <h1 className="hero-title mt-7 text-balance font-heading text-4xl font-light leading-[1.05] text-background sm:text-5xl md:text-6xl">
             Servicio <span className="hero-title-accent text-accent">Integral</span> para la <span className="hero-title-accent text-accent">Industria</span>
