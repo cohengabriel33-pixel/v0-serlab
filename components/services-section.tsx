@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useRef, useState } from "react"
 
 type ServiceGroup = {
   title: string
@@ -52,7 +52,15 @@ const panels: ServicePanel[] = [
 
 export function ServicesSection() {
   const [activeService, setActiveService] = useState(0)
+  const descriptionPanelRef = useRef<HTMLDivElement>(null)
   const activePanel = panels[activeService]
+
+  const selectService = (index: number) => {
+    setActiveService(index)
+    requestAnimationFrame(() => {
+      descriptionPanelRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })
+    })
+  }
 
   return (
     <section id="servicios" className="bg-foreground">
@@ -67,7 +75,7 @@ export function ServicesSection() {
           {panels.map((panel, index) => {
             const isActive = activeService === index
             return (
-              <button key={panel.subtitle} type="button" role="tab" aria-selected={isActive} aria-controls={`service-panel-${index}`} onClick={() => setActiveService(index)} className={`group relative block aspect-[3/4] overflow-hidden rounded-3xl border-4 text-left transition-all duration-500 ${isActive ? "border-primary shadow-2xl shadow-primary/20" : "border-accent/70"}`}>
+              <button key={panel.subtitle} type="button" role="tab" aria-selected={isActive} aria-controls={`service-panel-${index}`} onClick={() => selectService(index)} className={`group relative block aspect-[3/4] overflow-hidden rounded-3xl border-4 text-left transition-all duration-500 ${isActive ? "border-primary shadow-2xl shadow-primary/20" : "border-accent/70"}`}>
                 <div className={`absolute inset-0 bg-no-repeat transition-all duration-700 ${isActive ? "scale-105 opacity-35" : "opacity-70 group-hover:scale-105 group-hover:opacity-45"}`} style={{ backgroundImage: `url('${panel.image}')`, backgroundSize: "cover", backgroundPosition: "center" }} aria-hidden="true" />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/15 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-5">
@@ -79,7 +87,7 @@ export function ServicesSection() {
           })}
         </div>
 
-        <div id={`service-panel-${activeService}`} role="tabpanel" aria-live="polite" className="mt-6 overflow-hidden rounded-3xl border border-accent/40 bg-background/95 p-6 text-foreground shadow-xl sm:p-8">
+        <div ref={descriptionPanelRef} id={`service-panel-${activeService}`} role="tabpanel" aria-live="polite" className="mt-6 overflow-hidden rounded-3xl border border-accent/40 bg-background/95 p-6 text-foreground shadow-xl sm:p-8">
           <div key={activeService} className="animate-service-detail">
             <div className="mb-7 border-b border-border pb-6">
               <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Servicio seleccionado</p>
