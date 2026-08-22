@@ -28,20 +28,20 @@ const members: Member[] = [
     ],
   },
   {
+    name: "Gonzalo X. Quesada",
+    image: "/member-quesada-new.png",
+    roles: ["Profesional farmacéutico"],
+    bio: [
+      "Formado y egresado de la Universidad Nacional de La Plata, con experiencia en sistemas de gestión de calidad mediante el ejercicio de direcciones técnicas de diversos ámbitos privados y en el sector de desarrollo de nuevos productos con especialización en el área analítica desarrollo, validaciones y estabilidades.",
+    ],
+  },
+  {
     name: "Alejandro Leonel Cavassa",
     image: "/member-cavassa-new.png",
     roles: ["Director de Calidad"],
     bio: [
       "Químico especializado en Gestión de Calidad. Amplios conocimientos en diseño de estrategias para implementar y mejorar de forma continua sistemas de calidad bajo lineamientos de normativas GMP e ISO 9001.",
       "Capacitador con posgrado docente y amplia experiencia en el rubro para formación en distintos niveles.",
-    ],
-  },
-  {
-    name: "Gonzalo X. Quesada",
-    image: "/member-quesada-new.png",
-    roles: ["Profesional farmacéutico"],
-    bio: [
-      "Formado y egresado de la Universidad Nacional de La Plata, con experiencia en sistemas de gestión de calidad mediante el ejercicio de direcciones técnicas de diversos ámbitos privados y en el sector de desarrollo de nuevos productos con especialización en el área analítica desarrollo, validaciones y estabilidades.",
     ],
   },
 ]
