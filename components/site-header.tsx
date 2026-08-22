@@ -78,7 +78,7 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-2 lg:flex">
+        <div className="flex items-center gap-2">
           <a
             href="mailto:info@serlabconsultora.com"
             aria-label="Email"
