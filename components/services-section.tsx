@@ -4,8 +4,8 @@ import { useState } from "react"
 
 const panels = [
   {
-    title: "Control de",
-    subtitle: "Calidad",
+    title: "Servicios",
+    subtitle: "Analíticos",
     image: "/service-lab.jpeg",
     description: [
       "Control de calidad de materias primas.",
@@ -15,8 +15,8 @@ const panels = [
     ],
   },
   {
-    title: "Desarrollo",
-    subtitle: "Analítico",
+    title: "Servicios",
+    subtitle: "Regulatorios",
     image: "/service-writing.jpeg",
     description: [
       "Desarrollo de técnicas analíticas de macrocomponentes en laboratorios calificados.",
@@ -24,8 +24,8 @@ const panels = [
     ],
   },
   {
-    title: "Validaciones",
-    subtitle: "Analíticas",
+    title: "Servicios",
+    subtitle: "Especiales",
     image: "/service-plans.jpeg",
     description: [
       "Validaciones analíticas de macrocomponentes e impurezas.",
