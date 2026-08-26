@@ -16,12 +16,14 @@ type Member = {
   image: string
   roles: string[]
   bio: string[]
+  linkedin: string
 }
 
 const members: Member[] = [
   {
     name: "Juan Carlos Farrán",
     image: "/member-farran.png",
+    linkedin: "https://www.linkedin.com/in/juan-carlos-farr%C3%A1n-b1538114/",
     roles: ["Farmacéutico", "Director y Fundador de SerLAB"],
     bio: [
       "Profesional farmacéutico orientado a resultados con más de 25 años de experiencia y aumento de responsabilidades en áreas de Control de Calidad, Desarrollo Analítico, Aseguramiento de Calidad en la industria farmacéutica y afines. Amplio conocimiento técnico y experiencia dirigiendo áreas técnicas complejas y diversas, orientado a la calidad y mejora continua.",
@@ -30,6 +32,7 @@ const members: Member[] = [
   {
     name: "Gonzalo X. Quesada",
     image: "/member-quesada-new.png",
+    linkedin: "https://www.linkedin.com/in/gonzalo-quesada-232113187/",
     roles: ["Profesional farmacéutico"],
     bio: [
       "Formado y egresado de la Universidad Nacional de La Plata, con experiencia en sistemas de gestión de calidad mediante el ejercicio de direcciones técnicas de diversos ámbitos privados y en el sector de desarrollo de nuevos productos con especialización en el área analítica desarrollo, validaciones y estabilidades.",
@@ -37,7 +40,8 @@ const members: Member[] = [
   },
   {
     name: "Alejandro Leonel Cavassa",
-    image: "/member-cavassa-new.png",
+    image: "/member-cavassa-new.jpeg",
+    linkedin: "https://www.linkedin.com/in/alejandro-leonel-cavassa-588a37137/",
     roles: ["Director de Calidad"],
     bio: [
       "Químico especializado en Gestión de Calidad. Amplios conocimientos en diseño de estrategias para implementar y mejorar de forma continua sistemas de calidad bajo lineamientos de normativas GMP e ISO 9001.",
@@ -78,7 +82,7 @@ function MemberCard({ member }: { member: Member }) {
       </button>
 
       <a
-        href="https://www.linkedin.com/in/servicios-a-laboratorios-serlab-sl/"
+        href={member.linkedin}
         target="_blank"
         rel="noopener noreferrer"
         aria-label={`LinkedIn de ${member.name}`}

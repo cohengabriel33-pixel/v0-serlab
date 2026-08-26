@@ -96,7 +96,7 @@ export function SiteHeader() {
             <WhatsappIcon className="h-4 w-4" />
           </a>
           <a
-            href="https://www.linkedin.com/in/servicios-a-laboratorios-serlab-sl/"
+            href="https://www.linkedin.com/company/serlabsl/home/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
