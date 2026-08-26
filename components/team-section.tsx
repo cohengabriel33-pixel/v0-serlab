@@ -51,6 +51,8 @@ const members: Member[] = [
 ]
 
 function Hexagon({ image, name }: { image: string; name: string }) {
+  const isAlejandro = name === "Alejandro Leonel Cavassa"
+
   return (
     <div
       className="relative h-36 w-32 bg-primary p-1"
@@ -60,7 +62,10 @@ function Hexagon({ image, name }: { image: string; name: string }) {
         src={image || "/placeholder.svg"}
         alt={`Foto de ${name}`}
         className="h-full w-full object-cover"
-        style={{ clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)" }}
+        style={{
+          clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+          objectPosition: isAlejandro ? "center 25%" : "center",
+        }}
       />
     </div>
   )
