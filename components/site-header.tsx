@@ -81,6 +81,8 @@ export function SiteHeader() {
         <div className="flex items-center gap-2">
           <a
             href="mailto:info@serlabconsultora.com"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="Email"
             className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground transition-opacity hover:opacity-90"
           >
