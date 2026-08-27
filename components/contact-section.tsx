@@ -23,8 +23,8 @@ export function ContactSection() {
           <ul className="mt-8 space-y-4">
             <li className="flex items-center gap-3">
               <Mail className="h-5 w-5 shrink-0" />
-              <a href="mailto:info@serlabconsultora.com" className="underline-offset-2 hover:underline">
-                info@serlabconsultora.com
+              <a href="mailto:administración@serlabgroup.com" className="underline-offset-2 hover:underline">
+                administración@serlabgroup.com
               </a>
             </li>
             <li className="flex items-center gap-3">
