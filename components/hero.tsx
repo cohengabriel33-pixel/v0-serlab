@@ -34,7 +34,7 @@ export function Hero() {
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href="#reclutamiento"
+              href="mailto:administración@serlabgroup.com" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-background/40 px-8 py-3.5 text-sm font-semibold uppercase tracking-wide text-background transition-colors hover:bg-background/10"
             >
               Contacto

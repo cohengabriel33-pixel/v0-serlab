@@ -63,21 +63,12 @@ export function CampusSection() {
               ))}
             </ul>
 
-            <a
-              href="https://serlab.educativa.org/acceso.cgi"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group mt-9 inline-flex items-center gap-3 rounded-full bg-primary px-7 py-3.5 font-heading text-sm font-semibold uppercase tracking-wide text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/30"
-            >
-              Ingresar al Campus
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
           </div>
 
           {/* Right: animated card */}
           <div className="flex justify-center">
             <a
-              href="https://serlab.educativa.org/acceso.cgi"
+              href="https://serlab.educativa.org/catalogo.cgi"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Ingresar al Campus Virtual Serlab"

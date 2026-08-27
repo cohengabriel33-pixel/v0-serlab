@@ -10,9 +10,9 @@ const nav = [
     label: "Servicios",
     href: "#servicios",
     children: [
-      { label: "Servicios analíticos", href: "#servicios" },
-      { label: "Servicios regulatorios", href: "#servicios" },
-      { label: "Servicios educativos", href: "#servicios" },
+      { label: "Servicios analíticos", href: "#servicio-analitico" },
+      { label: "Servicios regulatorios", href: "#servicio-regulatorio" },
+      { label: "Servicios especiales", href: "#servicio-especial" },
     ],
   },
   {
@@ -80,7 +80,7 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-2">
           <a
-            href="mailto:info@serlabconsultora.com"
+            href="mailto:administración@serlabgroup.com"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Email"
