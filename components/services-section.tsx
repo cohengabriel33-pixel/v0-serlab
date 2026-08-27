@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 type ServiceGroup = {
   title: string
@@ -55,6 +55,21 @@ export function ServicesSection() {
   const descriptionPanelRef = useRef<HTMLDivElement>(null)
   const activePanel = panels[activeService]
 
+  useEffect(() => {
+    const hashToIndex: Record<string, number> = {
+      "#servicio-analitico": 0,
+      "#servicio-regulatorio": 1,
+      "#servicio-especial": 2,
+    }
+    const syncServiceFromHash = () => {
+      const index = hashToIndex[window.location.hash]
+      if (index !== undefined) setActiveService(index)
+    }
+    syncServiceFromHash()
+    window.addEventListener("hashchange", syncServiceFromHash)
+    return () => window.removeEventListener("hashchange", syncServiceFromHash)
+  }, [])
+
   const selectService = (index: number) => {
     setActiveService(index)
     requestAnimationFrame(() => {
@@ -75,7 +90,7 @@ export function ServicesSection() {
           {panels.map((panel, index) => {
             const isActive = activeService === index
             return (
-              <button key={panel.subtitle} type="button" role="tab" aria-selected={isActive} aria-controls={`service-panel-${index}`} onClick={() => selectService(index)} className={`group relative block aspect-[3/4] overflow-hidden rounded-3xl border-4 text-left transition-all duration-500 ${isActive ? "border-primary shadow-2xl shadow-primary/20" : "border-accent/70"}`}>
+              <button id={["servicio-analitico", "servicio-regulatorio", "servicio-especial"][index]} key={panel.subtitle} type="button" role="tab" aria-selected={isActive} aria-controls={`service-panel-${index}`} onClick={() => selectService(index)} className={`group relative block aspect-[3/4] overflow-hidden rounded-3xl border-4 text-left transition-all duration-500 ${isActive ? "border-primary shadow-2xl shadow-primary/20" : "border-accent/70"}`}>
                 <div className={`absolute inset-0 bg-no-repeat transition-all duration-700 ${isActive ? "scale-105 opacity-35" : "opacity-70 group-hover:scale-105 group-hover:opacity-45"}`} style={{ backgroundImage: `url('${panel.image}')`, backgroundSize: "cover", backgroundPosition: "center" }} aria-hidden="true" />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/15 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-5">

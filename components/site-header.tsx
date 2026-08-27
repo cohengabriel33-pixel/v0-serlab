@@ -10,9 +10,9 @@ const nav = [
     label: "Servicios",
     href: "#servicios",
     children: [
-      { label: "Servicios analíticos", href: "#service-panel-0" },
-      { label: "Servicios regulatorios", href: "#service-panel-1" },
-      { label: "Servicios especiales", href: "#service-panel-2" },
+      { label: "Servicios analíticos", href: "#servicio-analitico" },
+      { label: "Servicios regulatorios", href: "#servicio-regulatorio" },
+      { label: "Servicios especiales", href: "#servicio-especial" },
     ],
   },
   {
