@@ -73,7 +73,9 @@ export function ServicesSection() {
   const selectService = (index: number) => {
     setActiveService(index)
     requestAnimationFrame(() => {
-      descriptionPanelRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })
+      requestAnimationFrame(() => {
+        descriptionPanelRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })
+      })
     })
   }
 
@@ -102,18 +104,18 @@ export function ServicesSection() {
           })}
         </div>
 
-        <div ref={descriptionPanelRef} id={`service-panel-${activeService}`} role="tabpanel" aria-live="polite" className="mt-6 overflow-hidden rounded-3xl border border-accent/40 bg-background/95 p-6 text-foreground shadow-xl sm:p-8">
+        <div ref={descriptionPanelRef} id={`service-panel-${activeService}`} role="tabpanel" aria-live="polite" className="mt-6 scroll-mt-24 overflow-hidden rounded-3xl border border-accent/40 bg-background/95 p-4 text-foreground shadow-xl sm:p-6">
           <div key={activeService} className="animate-service-detail">
-            <div className="mb-7 border-b border-border pb-6">
+            <div className="mb-5 border-b border-border pb-5">
               <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Servicio seleccionado</p>
               <h3 className="mt-2 font-heading text-3xl font-medium text-foreground sm:text-4xl">{activePanel.title} <span className="italic text-primary">{activePanel.subtitle}</span></h3>
               <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">Soluciones técnicas pensadas para acompañar cada etapa del desarrollo y la fabricación farmacéutica.</p>
             </div>
-            <div className="grid gap-5 lg:grid-cols-2">
+            <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
               {activePanel.groups.map((group) => (
-                <article key={group.title} className="rounded-2xl border border-border bg-muted/35 p-5">
-                  <h4 className="font-heading text-lg font-bold text-foreground">{group.title}</h4>
-                  <ul className="mt-4 grid gap-3 text-sm leading-relaxed text-foreground">
+                <article key={group.title} className="rounded-2xl border border-border bg-muted/35 p-3.5">
+                  <h4 className="font-heading text-base font-bold leading-snug text-foreground">{group.title}</h4>
+                  <ul className="mt-3 grid gap-2 text-xs leading-relaxed text-foreground sm:text-[13px]">
                     {group.items.map((item) => <li key={item} className="flex gap-3"><span className="mt-0.5 text-lg leading-none text-primary" aria-hidden="true">✓</span><span>{item}</span></li>)}
                   </ul>
                 </article>
