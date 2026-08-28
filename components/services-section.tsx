@@ -63,7 +63,12 @@ export function ServicesSection() {
     }
     const syncServiceFromHash = () => {
       const index = hashToIndex[window.location.hash]
-      if (index !== undefined) setActiveService(index)
+      if (index === undefined) return
+
+      setActiveService(index)
+      window.setTimeout(() => {
+        descriptionPanelRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })
+      }, 0)
     }
     syncServiceFromHash()
     window.addEventListener("hashchange", syncServiceFromHash)
