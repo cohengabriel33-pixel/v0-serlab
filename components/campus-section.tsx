@@ -22,7 +22,7 @@ const features = [
 
 export function CampusSection() {
   return (
-    <section id="campus" className="relative overflow-hidden bg-secondary/40 py-20">
+    <section id="campus" className="relative scroll-mt-24 overflow-hidden bg-secondary/40 py-20">
       {/* animated background accents */}
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
         <div className="animate-campus-drift absolute -left-16 top-8 h-64 w-64 rounded-full bg-primary/10 blur-3xl" />

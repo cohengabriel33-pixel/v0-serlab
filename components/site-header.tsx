@@ -13,6 +13,7 @@ const nav = [
       { label: "Servicios analíticos", href: "#servicio-analitico" },
       { label: "Servicios regulatorios", href: "#servicio-regulatorio" },
       { label: "Servicios especiales", href: "#servicio-especial" },
+      { label: "Servicios Educativos", href: "#campus" },
     ],
   },
   {
