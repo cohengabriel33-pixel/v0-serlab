@@ -10,7 +10,7 @@ function WhatsappIcon({ className = "" }: { className?: string }) {
 
 export function ContactSection() {
   return (
-    <section id="contacto" className="bg-primary py-20 text-primary-foreground">
+    <section id="contacto" className="scroll-mt-24 bg-primary py-20 text-primary-foreground">
       <div className="mx-auto grid max-w-6xl gap-12 px-4 md:grid-cols-2">
         <div>
           <h2 className="font-heading text-3xl font-semibold uppercase tracking-wide">Contacto</h2>
