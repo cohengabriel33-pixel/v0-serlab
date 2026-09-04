@@ -27,7 +27,7 @@ export function Hero() {
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
-              href="#servicios"
+              href="#servicios-cards"
               className="group inline-flex items-center gap-3 rounded-full bg-primary px-8 py-3.5 text-sm font-semibold uppercase tracking-wide text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:-translate-y-0.5 hover:shadow-xl"
             >
               Nuestros servicios
