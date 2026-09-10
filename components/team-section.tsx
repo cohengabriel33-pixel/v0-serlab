@@ -55,7 +55,7 @@ function Hexagon({ image, name }: { image: string; name: string }) {
 
   return (
     <div
-      className="relative h-36 w-32 bg-primary p-1"
+      className="relative aspect-[8/9] w-[clamp(7rem,32vw,8rem)] bg-primary p-1"
       style={{ clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)" }}
     >
       <img
@@ -125,7 +125,7 @@ export function TeamSection() {
       <div className="relative mx-auto max-w-6xl px-4">
         <div className="mb-12 text-center">
           <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Nuestro equipo</p>
-          <h2 className="mt-3 font-heading text-4xl font-light text-foreground sm:text-5xl">
+          <h2 className="mt-3 font-heading text-[clamp(2.25rem,6vw,3rem)] font-light text-foreground">
             Quiénes <span className="italic text-primary">somos</span>
           </h2>
           <span className="mx-auto mt-5 block h-px w-20 bg-primary/50" />

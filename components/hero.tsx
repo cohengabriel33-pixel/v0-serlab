@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react"
 
 export function Hero() {
   return (
-    <section id="inicio" className="relative flex min-h-[640px] items-center overflow-hidden">
+    <section id="inicio" className="relative flex min-h-[clamp(34rem,78vh,48rem)] items-center overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/hero-lab.png')" }}
@@ -19,13 +19,13 @@ export function Hero() {
           <p className="inline-flex items-center gap-2 rounded-full border border-background/25 bg-background/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.25em] text-background backdrop-blur">
             Bienvenidos a Serlab Consultora
           </p>
-          <h1 className="hero-title mt-7 text-balance font-heading text-4xl font-light leading-[1.05] text-background sm:text-5xl md:text-6xl">
+          <h1 className="hero-title mt-7 text-balance font-heading text-[clamp(2.25rem,7vw,4.5rem)] font-light leading-[1.05] text-background">
             Servicio <span className="hero-title-accent text-accent">Integral</span> para la <span className="hero-title-accent text-accent">Industria</span>
           </h1>
           <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-background/85">
             Calidad, cumplimiento normativo y excelencia analítica para laboratorios farmacéuticos y afines.
           </p>
-          <div className="mt-9 flex flex-wrap items-center gap-4">
+          <div className="mt-9 flex flex-wrap items-center gap-3 sm:gap-4">
             <a
               href="#servicios-cards"
               className="group inline-flex items-center gap-3 rounded-full bg-primary px-8 py-3.5 text-sm font-semibold uppercase tracking-wide text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:-translate-y-0.5 hover:shadow-xl"

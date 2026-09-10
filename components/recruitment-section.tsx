@@ -49,7 +49,7 @@ export function RecruitmentSection() {
   }
 
   return (
-    <section id="servicio-empresas" className="bg-secondary/40 py-20">
+    <section id="servicio-empresas" className="scroll-mt-24 bg-secondary/40 py-[clamp(3.5rem,8vw,5rem)]">
       <div className="mx-auto max-w-6xl px-4">
         <div className="mx-auto mb-12 flex max-w-xl rounded-sm border border-border bg-background p-1" role="tablist" aria-label="Opciones de Serlab">
           <button type="button" role="tab" aria-selected={activeTab === "empresas"} onClick={() => selectTab("empresas")} className={`flex-1 rounded-sm px-4 py-3 text-sm font-semibold transition-colors ${activeTab === "empresas" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}>Para empresas</button>
@@ -70,7 +70,7 @@ export function RecruitmentSection() {
             </div>
           </div>
         ) : (
-          <div id="base-de-cv" role="tabpanel" aria-label="Base de CV" className="mx-auto max-w-2xl rounded-md bg-background p-8 shadow-xl">
+          <div id="base-de-cv" role="tabpanel" aria-label="Base de CV" className="mx-auto max-h-[90vh] max-w-[min(100%,42rem)] overflow-y-auto rounded-md bg-background p-[clamp(1rem,4vw,2rem)] shadow-xl">
             <p className="text-center text-xs font-medium uppercase tracking-[0.25em] text-primary">Oportunidades laborales</p>
             <h2 className="mt-3 text-center font-heading text-3xl font-semibold text-foreground">Sumá tu CV a nuestra base</h2>
             <p className="mt-2 text-center text-sm leading-relaxed text-muted-foreground">¿Buscás oportunidades laborales en la industria? Dejanos tu CV y te tenemos en cuenta para futuras búsquedas.</p>
