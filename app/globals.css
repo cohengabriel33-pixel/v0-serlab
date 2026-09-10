@@ -73,6 +73,7 @@
   --chart-4: oklch(0.45 0.06 40);
   --chart-5: oklch(0.68 0.1 30);
   --radius: 0.875rem;
+  --site-header-offset: 5rem;
   --sidebar: oklch(0.96 0.016 78);
   --sidebar-foreground: oklch(0.26 0.025 50);
   --sidebar-primary: oklch(0.58 0.15 45);
@@ -134,6 +135,14 @@
   img,
   svg {
     max-width: 100%;
+  }
+  [id] {
+    scroll-margin-top: var(--site-header-offset);
+  }
+  @media (max-width: 1023px) {
+    :root {
+      --site-header-offset: 4.5rem;
+    }
   }
 }
 

@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 
 type ServiceGroup = {
   title: string
@@ -52,7 +52,6 @@ const panels: ServicePanel[] = [
 
 export function ServicesSection() {
   const [activeService, setActiveService] = useState(0)
-  const descriptionPanelRef = useRef<HTMLDivElement>(null)
   const activePanel = panels[activeService]
 
   useEffect(() => {
@@ -66,7 +65,9 @@ export function ServicesSection() {
       if (index === undefined) return
 
       setActiveService(index)
-      document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth", block: "start" })
+      window.requestAnimationFrame(() => {
+        document.getElementById(`service-panel-${index}`)?.scrollIntoView({ behavior: "smooth", block: "start" })
+      })
     }
     syncServiceFromHash()
     window.addEventListener("hashchange", syncServiceFromHash)
@@ -75,16 +76,11 @@ export function ServicesSection() {
 
   const selectService = (index: number) => {
     setActiveService(index)
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        descriptionPanelRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })
-      })
-    })
   }
 
   return (
-    <section id="servicios" className="scroll-mt-24 bg-foreground">
-      <div className="py-14 text-center">
+    <section id="servicios" className="bg-foreground">
+      <div className="pb-6 pt-10 text-center sm:pb-8 sm:pt-12">
         <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Lo que hacemos</p>
         <h2 className="mt-3 font-heading text-[clamp(2.25rem,6vw,3rem)] font-light text-background text-balance">Servicios</h2>
         <span className="mx-auto mt-5 block h-px w-20 bg-background/40" />
@@ -107,7 +103,7 @@ export function ServicesSection() {
           })}
         </div>
 
-        <div ref={descriptionPanelRef} id={`service-panel-${activeService}`} role="tabpanel" aria-live="polite" className="mt-6 scroll-mt-24 overflow-hidden rounded-3xl border border-accent/40 bg-background/95 p-4 text-foreground shadow-xl sm:p-6">
+        <div id={`service-panel-${activeService}`} role="tabpanel" aria-live="polite" className="mt-10 scroll-mt-[var(--site-header-offset)] overflow-hidden rounded-3xl border border-accent/40 bg-background p-[clamp(1rem,3vw,1.75rem)] text-foreground shadow-xl">
           <div key={activeService} className="animate-service-detail">
             <div className="mb-5 border-b border-border pb-5">
               <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Servicio seleccionado</p>

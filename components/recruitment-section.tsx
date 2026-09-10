@@ -53,8 +53,8 @@ export function RecruitmentSection() {
           <button type="button" role="tab" aria-selected={activeTab === "cv"} onClick={() => selectTab("cv")} className={`flex-1 rounded-sm px-4 py-3 text-sm font-semibold transition-colors ${activeTab === "cv" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}>Base de CV</button>
         </div>
 
-        {activeTab === "empresas" ? (
-          <div id="para-empresas" role="tabpanel" aria-label="Para empresas">
+        <div className="grid items-start [&>*]:col-start-1 [&>*]:row-start-1">
+          <div id="para-empresas" role="tabpanel" aria-label="Para empresas" className={activeTab === "empresas" ? "visible" : "invisible pointer-events-none"}>
             <div className="mb-12 text-center">
               <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Servicio para empresas</p>
               <h2 className="mt-3 text-balance font-heading text-4xl font-light text-foreground sm:text-5xl"><span className="italic text-primary">¿Tu empresa necesita cubrir una posición?</span></h2>
@@ -66,14 +66,13 @@ export function RecruitmentSection() {
               {benefits.map((b) => <div key={b.title} className="rounded-md border border-border bg-background p-6 text-center"><div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground"><b.icon className="h-6 w-6" /></div><h3 className="mt-4 font-heading text-lg font-semibold text-foreground">{b.title}</h3><p className="mt-2 text-sm leading-relaxed text-muted-foreground">{b.text}</p></div>)}
             </div>
           </div>
-        ) : (
-          <div id="base-de-cv" role="tabpanel" aria-label="Base de CV" className="mx-auto max-w-[min(100%,42rem)] rounded-md bg-background p-[clamp(1rem,4vw,2rem)] shadow-xl">
+          <div id="base-de-cv" role="tabpanel" aria-label="Base de CV" className={`mx-auto max-w-[min(100%,42rem)] rounded-md bg-background p-[clamp(1rem,4vw,2rem)] shadow-xl ${activeTab === "cv" ? "visible" : "invisible pointer-events-none"}`}>
             <p className="text-center text-xs font-medium uppercase tracking-[0.25em] text-primary">Oportunidades laborales</p>
             <h2 className="mt-3 text-center font-heading text-3xl font-semibold text-foreground">Sumá tu CV a nuestra base</h2>
             <p className="mt-2 text-center text-sm leading-relaxed text-muted-foreground">¿Buscás oportunidades laborales en la industria? Dejanos tu CV y te tenemos en cuenta para futuras búsquedas.</p>
             <div className="mt-8"><CvForm /></div>
           </div>
-        )}
+        </div>
       </div>
     </section>
   )
