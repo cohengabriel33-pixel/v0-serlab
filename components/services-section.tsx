@@ -80,7 +80,7 @@ export function ServicesSection() {
 
   return (
     <section id="servicios" className="bg-foreground">
-      <div className="py-14 text-center">
+      <div className="pb-6 pt-10 text-center sm:pb-8 sm:pt-12">
         <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Lo que hacemos</p>
         <h2 className="mt-3 font-heading text-[clamp(2.25rem,6vw,3rem)] font-light text-background text-balance">Servicios</h2>
         <span className="mx-auto mt-5 block h-px w-20 bg-background/40" />
