@@ -43,9 +43,6 @@ export function RecruitmentSection() {
   const selectTab = (tab: "empresas" | "cv") => {
     setActiveTab(tab)
     window.history.replaceState(null, "", tab === "cv" ? "#base-de-cv" : "#para-empresas")
-    requestAnimationFrame(() => {
-      document.getElementById(tab === "cv" ? "base-de-cv" : "para-empresas")?.scrollIntoView({ behavior: "smooth", block: "start" })
-    })
   }
 
   return (
@@ -70,7 +67,7 @@ export function RecruitmentSection() {
             </div>
           </div>
         ) : (
-          <div id="base-de-cv" role="tabpanel" aria-label="Base de CV" className="mx-auto max-h-[90vh] max-w-[min(100%,42rem)] overflow-y-auto rounded-md bg-background p-[clamp(1rem,4vw,2rem)] shadow-xl">
+          <div id="base-de-cv" role="tabpanel" aria-label="Base de CV" className="mx-auto max-w-[min(100%,42rem)] rounded-md bg-background p-[clamp(1rem,4vw,2rem)] shadow-xl">
             <p className="text-center text-xs font-medium uppercase tracking-[0.25em] text-primary">Oportunidades laborales</p>
             <h2 className="mt-3 text-center font-heading text-3xl font-semibold text-foreground">Sumá tu CV a nuestra base</h2>
             <p className="mt-2 text-center text-sm leading-relaxed text-muted-foreground">¿Buscás oportunidades laborales en la industria? Dejanos tu CV y te tenemos en cuenta para futuras búsquedas.</p>
