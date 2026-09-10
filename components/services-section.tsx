@@ -66,9 +66,7 @@ export function ServicesSection() {
       if (index === undefined) return
 
       setActiveService(index)
-      window.setTimeout(() => {
-        descriptionPanelRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })
-      }, 0)
+      document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth", block: "start" })
     }
     syncServiceFromHash()
     window.addEventListener("hashchange", syncServiceFromHash)

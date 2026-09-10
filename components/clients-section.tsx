@@ -11,21 +11,23 @@ const logos = [
   ["Tecnifios", "/clients-tecnifios.jpg"],
   ["LKM", "/clients-lkm.jpg"],
   ["Vannier", "/clients-vannier.jpg"],
-  ["Febel", "/clients-febel.jpg"],
   ["Richet", "/clients-richet.png"],
   ["Bausch + Lomb", "/clients-bausch.png"],
   ["SG", "/clients-sg.png"],
-  ["Manufacturas Febel", "/clients-febbel.jpg"],
   ["Login", "/clients-login.png"],
   ["Techsphere", "/clients-techsphere.jpg"],
   ["Biogénesis Bagó", "/clients-bago.png"],
+  ["IMA Laboratorios", "/logos/laboratorios-ima.jpg"],
+  ["Aspen", "/logos/aspen.png"],
+  ["PAT Group", "/logos/pat-group.webp"],
+  ["UPL Farmacéutica", "/logos/upl-farmaceutica.jpg"],
 ] as const
 
 function LogoSet() {
   return (
     <div className="flex shrink-0 items-center gap-6 pr-6" aria-hidden="true">
       {logos.map(([name, src]) => (
-        <div key={name} className="flex h-28 w-48 shrink-0 items-center justify-center rounded-2xl border border-border bg-card px-5 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-md">
+        <div key={name} className="flex h-[clamp(7rem,18vw,8rem)] w-[clamp(12rem,30vw,14rem)] shrink-0 items-center justify-center rounded-2xl border border-border bg-card px-4 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-md sm:px-5">
           <Image src={src} alt={`Logo de ${name}`} width={180} height={100} className="max-h-20 w-auto max-w-full object-contain mix-blend-multiply dark:mix-blend-normal" />
         </div>
       ))}
