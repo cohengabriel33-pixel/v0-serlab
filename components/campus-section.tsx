@@ -40,7 +40,7 @@ export function CampusSection() {
               <GraduationCap className="h-4 w-4" />
               Servicios educativos
             </span>
-            <h2 className="mt-5 font-heading text-4xl font-light text-foreground text-balance sm:text-5xl">
+            <h2 className="mt-5 font-heading text-[clamp(2.25rem,6vw,3rem)] font-light text-foreground text-balance">
               Campus <span className="italic text-primary">Virtual</span> Serlab
             </h2>
             <span className="mt-5 block h-px w-20 bg-primary/50" />
@@ -78,7 +78,7 @@ export function CampusSection() {
               <span className="absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/20 [animation:campus-pulse-ring_3s_ease-out_infinite]" />
               <span className="absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/20 [animation:campus-pulse-ring_3s_ease-out_infinite] [animation-delay:1.5s]" />
 
-              <div className="relative overflow-hidden rounded-2xl border border-border bg-card p-10 text-center shadow-xl transition-transform duration-300 group-hover:scale-[1.02]">
+              <div className="relative overflow-hidden rounded-2xl border border-border bg-card p-[clamp(1.25rem,5vw,2.5rem)] text-center shadow-xl transition-transform duration-300 group-hover:scale-[1.02]">
                 {/* shine sweep */}
                 <span className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-transparent via-primary/10 to-transparent [animation:campus-shine_4s_ease-in-out_infinite]" />
 

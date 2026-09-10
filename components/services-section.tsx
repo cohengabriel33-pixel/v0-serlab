@@ -66,9 +66,7 @@ export function ServicesSection() {
       if (index === undefined) return
 
       setActiveService(index)
-      window.setTimeout(() => {
-        descriptionPanelRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })
-      }, 0)
+      document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth", block: "start" })
     }
     syncServiceFromHash()
     window.addEventListener("hashchange", syncServiceFromHash)
@@ -88,7 +86,7 @@ export function ServicesSection() {
     <section id="servicios" className="scroll-mt-24 bg-foreground">
       <div className="py-14 text-center">
         <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Lo que hacemos</p>
-        <h2 className="mt-3 font-heading text-4xl font-light text-background sm:text-5xl text-balance">Servicios</h2>
+        <h2 className="mt-3 font-heading text-[clamp(2.25rem,6vw,3rem)] font-light text-background text-balance">Servicios</h2>
         <span className="mx-auto mt-5 block h-px w-20 bg-background/40" />
       </div>
 
@@ -97,7 +95,7 @@ export function ServicesSection() {
           {panels.map((panel, index) => {
             const isActive = activeService === index
             return (
-              <button id={["servicio-analitico", "servicio-regulatorio", "servicio-especial"][index]} key={panel.subtitle} type="button" role="tab" aria-selected={isActive} aria-controls={`service-panel-${index}`} onClick={() => selectService(index)} className={`group relative block scroll-mt-24 aspect-[3/4] overflow-hidden rounded-3xl border-4 text-left transition-all duration-500 ${isActive ? "border-primary shadow-2xl shadow-primary/20" : "border-accent/70"}`}>
+              <button id={["servicio-analitico", "servicio-regulatorio", "servicio-especial"][index]} key={panel.subtitle} type="button" role="tab" aria-selected={isActive} aria-controls={`service-panel-${index}`} onClick={() => selectService(index)} className={`group relative block min-h-[clamp(15rem,48vw,21rem)] overflow-hidden rounded-3xl border-4 text-left transition-all duration-500 ${isActive ? "border-primary shadow-2xl shadow-primary/20" : "border-accent/70"}`}>
                 <div className={`absolute inset-0 bg-no-repeat transition-all duration-700 ${isActive ? "opacity-35" : "opacity-70 group-hover:opacity-45"}`} style={{ backgroundImage: `url('${panel.image}')`, backgroundSize: "contain", backgroundPosition: "center" }} aria-hidden="true" />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/15 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-5">
