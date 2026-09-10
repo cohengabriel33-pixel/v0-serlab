@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 
 type ServiceGroup = {
   title: string
@@ -52,7 +52,6 @@ const panels: ServicePanel[] = [
 
 export function ServicesSection() {
   const [activeService, setActiveService] = useState(0)
-  const descriptionPanelRef = useRef<HTMLDivElement>(null)
   const activePanel = panels[activeService]
 
   useEffect(() => {
@@ -75,15 +74,10 @@ export function ServicesSection() {
 
   const selectService = (index: number) => {
     setActiveService(index)
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        descriptionPanelRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })
-      })
-    })
   }
 
   return (
-    <section id="servicios" className="scroll-mt-24 bg-foreground">
+    <section id="servicios" className="bg-foreground">
       <div className="py-14 text-center">
         <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Lo que hacemos</p>
         <h2 className="mt-3 font-heading text-[clamp(2.25rem,6vw,3rem)] font-light text-background text-balance">Servicios</h2>
@@ -107,7 +101,7 @@ export function ServicesSection() {
           })}
         </div>
 
-        <div ref={descriptionPanelRef} id={`service-panel-${activeService}`} role="tabpanel" aria-live="polite" className="mt-6 scroll-mt-24 overflow-hidden rounded-3xl border border-accent/40 bg-background/95 p-4 text-foreground shadow-xl sm:p-6">
+        <div id={`service-panel-${activeService}`} role="tabpanel" aria-live="polite" className="mt-6 scroll-mt-24 overflow-hidden rounded-3xl border border-accent/40 bg-background/95 p-4 text-foreground shadow-xl sm:p-6">
           <div key={activeService} className="animate-service-detail">
             <div className="mb-5 border-b border-border pb-5">
               <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Servicio seleccionado</p>
