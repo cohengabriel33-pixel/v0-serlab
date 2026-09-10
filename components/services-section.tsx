@@ -65,7 +65,9 @@ export function ServicesSection() {
       if (index === undefined) return
 
       setActiveService(index)
-      document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth", block: "start" })
+      window.requestAnimationFrame(() => {
+        document.getElementById(`service-panel-${index}`)?.scrollIntoView({ behavior: "smooth", block: "start" })
+      })
     }
     syncServiceFromHash()
     window.addEventListener("hashchange", syncServiceFromHash)
@@ -101,7 +103,7 @@ export function ServicesSection() {
           })}
         </div>
 
-        <div id={`service-panel-${activeService}`} role="tabpanel" aria-live="polite" className="mt-6 scroll-mt-24 overflow-hidden rounded-3xl border border-accent/40 bg-background/95 p-4 text-foreground shadow-xl sm:p-6">
+        <div id={`service-panel-${activeService}`} role="tabpanel" aria-live="polite" className="mt-10 scroll-mt-[var(--site-header-offset)] overflow-hidden rounded-3xl border border-accent/40 bg-background p-[clamp(1rem,3vw,1.75rem)] text-foreground shadow-xl">
           <div key={activeService} className="animate-service-detail">
             <div className="mb-5 border-b border-border pb-5">
               <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Servicio seleccionado</p>
