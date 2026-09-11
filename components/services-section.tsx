@@ -81,7 +81,15 @@ export function ServicesSection() {
     setActiveService(index)
     window.history.replaceState(null, "", `#${["servicio-analitico", "servicio-regulatorio", "servicio-especial"][index]}`)
     window.requestAnimationFrame(() => {
-      document.getElementById(`service-panel-${index}`)?.scrollIntoView({ behavior: "smooth", block: "start" })
+      const panel = document.getElementById(`service-panel-${index}`)
+      if (!panel) return
+      if (index === 0) {
+        const headerOffset = Number.parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--site-header-offset")) || 0
+        const target = window.scrollY + panel.getBoundingClientRect().top - headerOffset + 24
+        window.scrollTo({ top: Math.max(0, target), behavior: "smooth" })
+        return
+      }
+      panel.scrollIntoView({ behavior: "smooth", block: "start" })
     })
   }
 
