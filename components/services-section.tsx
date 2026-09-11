@@ -63,7 +63,6 @@ export function ServicesSection() {
     const syncServiceFromHash = () => {
       const index = hashToIndex[window.location.hash]
       if (index === undefined) return
-
       setActiveService(index)
       window.requestAnimationFrame(() => {
         document.getElementById(`service-panel-${index}`)?.scrollIntoView({ behavior: "smooth", block: "start" })
@@ -76,6 +75,10 @@ export function ServicesSection() {
 
   const selectService = (index: number) => {
     setActiveService(index)
+    window.history.replaceState(null, "", `#${["servicio-analitico", "servicio-regulatorio", "servicio-especial"][index]}`)
+    window.requestAnimationFrame(() => {
+      document.getElementById(`service-panel-${index}`)?.scrollIntoView({ behavior: "smooth", block: "start" })
+    })
   }
 
   return (
@@ -86,13 +89,13 @@ export function ServicesSection() {
         <span className="mx-auto mt-5 block h-px w-20 bg-background/40" />
       </div>
 
-      <div className="mx-auto max-w-6xl px-4 pb-16">
+      <div className="mx-auto w-full max-w-6xl px-4 pb-16 sm:px-6 lg:px-8">
         <div id="servicios-cards" className="scroll-mt-24 grid gap-4 md:grid-cols-3" role="tablist" aria-label="Servicios de Serlab">
           {panels.map((panel, index) => {
             const isActive = activeService === index
             return (
-              <button id={["servicio-analitico", "servicio-regulatorio", "servicio-especial"][index]} key={panel.subtitle} type="button" role="tab" aria-selected={isActive} aria-controls={`service-panel-${index}`} onClick={() => selectService(index)} className={`group relative block min-h-[clamp(15rem,48vw,21rem)] overflow-hidden rounded-3xl border-4 text-left transition-all duration-500 ${isActive ? "border-primary shadow-2xl shadow-primary/20" : "border-accent/70"}`}>
-                <div className={`absolute inset-0 bg-no-repeat transition-all duration-700 ${isActive ? "opacity-35" : "opacity-70 group-hover:opacity-45"}`} style={{ backgroundImage: `url('${panel.image}')`, backgroundSize: "contain", backgroundPosition: "center" }} aria-hidden="true" />
+              <button id={["servicio-analitico", "servicio-regulatorio", "servicio-especial"][index]} key={panel.subtitle} type="button" role="tab" aria-selected={isActive} aria-controls={`service-panel-${index}`} onClick={() => selectService(index)} className={`group relative isolate flex min-h-[clamp(15rem,48vw,21rem)] cursor-pointer flex-col justify-end overflow-hidden rounded-3xl border-4 text-left transition-all duration-500 ${isActive ? "border-primary shadow-2xl shadow-primary/20" : "border-accent/70"}`}>
+                <div className={`absolute inset-0 bg-no-repeat transition-all duration-700 ${isActive ? "opacity-35" : "opacity-70 group-hover:opacity-45"}`} style={{ backgroundImage: `url('${panel.image}')`, backgroundSize: "cover", backgroundPosition: "center" }} aria-hidden="true" />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/15 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-5">
                   <p className="font-heading text-2xl font-medium text-background">{panel.title} <span className="italic text-accent">{panel.subtitle}</span></p>
