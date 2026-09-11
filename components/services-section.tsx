@@ -65,7 +65,11 @@ export function ServicesSection() {
       if (index === undefined) return
       setActiveService(index)
       window.requestAnimationFrame(() => {
-        document.getElementById(`service-panel-${index}`)?.scrollIntoView({ behavior: "smooth", block: "start" })
+        const panel = document.getElementById(`service-panel-${index}`)
+        if (!panel) return
+        const headerOffset = Number.parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--site-header-offset")) || 0
+        const target = window.scrollY + panel.getBoundingClientRect().top - headerOffset - 12
+        window.scrollTo({ top: Math.max(0, target), behavior: "auto" })
       })
     }
     syncServiceFromHash()
