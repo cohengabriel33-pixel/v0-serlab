@@ -79,7 +79,7 @@ function MemberCard({ member }: { member: Member }) {
 
       <button
         onClick={() => setOpen((v) => !v)}
-        className="mt-3 flex w-full max-w-xs items-center justify-between rounded-sm bg-primary px-4 py-2.5 text-left text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+        className="mt-3 flex h-10 w-full max-w-xs items-center justify-between rounded-sm bg-primary px-4 py-2.5 text-left text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
         aria-expanded={open}
       >
         <span>{member.name}</span>
