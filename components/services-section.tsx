@@ -68,7 +68,7 @@ export function ServicesSection() {
         const panel = document.getElementById(`service-panel-${index}`)
         if (!panel) return
         const headerOffset = Number.parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--site-header-offset")) || 0
-        const target = window.scrollY + panel.getBoundingClientRect().top - headerOffset - 12
+        const target = window.scrollY + panel.getBoundingClientRect().top - headerOffset - 16
         window.scrollTo({ top: Math.max(0, target), behavior: "auto" })
       })
     }
@@ -83,13 +83,9 @@ export function ServicesSection() {
     window.requestAnimationFrame(() => {
       const panel = document.getElementById(`service-panel-${index}`)
       if (!panel) return
-      if (index === 0) {
-        const headerOffset = Number.parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--site-header-offset")) || 0
-        const target = window.scrollY + panel.getBoundingClientRect().top - headerOffset + 24
-        window.scrollTo({ top: Math.max(0, target), behavior: "smooth" })
-        return
-      }
-      panel.scrollIntoView({ behavior: "smooth", block: "start" })
+      const headerOffset = Number.parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--site-header-offset")) || 0
+      const target = window.scrollY + panel.getBoundingClientRect().top - headerOffset - 16
+      window.scrollTo({ top: Math.max(0, target), behavior: "smooth" })
     })
   }
 
@@ -118,7 +114,7 @@ export function ServicesSection() {
           })}
         </div>
 
-        <div id={`service-panel-${activeService}`} role="tabpanel" aria-live="polite" className={`mt-10 ${activeService === 0 ? "scroll-mt-[calc(var(--site-header-offset)+0.75rem)]" : "scroll-mt-[var(--site-header-offset)]"} overflow-hidden rounded-3xl border border-accent/40 bg-background p-[clamp(1rem,3vw,1.75rem)] text-foreground shadow-xl`}>
+        <div id={`service-panel-${activeService}`} role="tabpanel" aria-live="polite" className="mt-[clamp(2.5rem,7vw,5rem)] scroll-mt-[calc(var(--site-header-offset)+1rem)] overflow-hidden rounded-3xl border border-accent/40 bg-background p-[clamp(1rem,3vw,1.75rem)] text-foreground shadow-xl">
           <div key={activeService} className="animate-service-detail">
             <div className="mb-5 border-b border-border pb-5">
               <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Servicio seleccionado</p>
