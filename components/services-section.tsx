@@ -64,13 +64,13 @@ export function ServicesSection() {
       const index = hashToIndex[window.location.hash]
       if (index === undefined) return
       setActiveService(index)
-      window.requestAnimationFrame(() => {
+      window.setTimeout(() => {
         const panel = document.getElementById(`service-panel-${index}`)
         if (!panel) return
-        const headerOffset = Number.parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--site-header-offset")) || 0
-        const target = window.scrollY + panel.getBoundingClientRect().top - headerOffset - 12
+        const headerOffset = document.querySelector("header")?.getBoundingClientRect().height || 0
+        const target = window.scrollY + panel.getBoundingClientRect().top - headerOffset - 16
         window.scrollTo({ top: Math.max(0, target), behavior: "auto" })
-      })
+      }, 120)
     }
     syncServiceFromHash()
     window.addEventListener("hashchange", syncServiceFromHash)
@@ -80,17 +80,13 @@ export function ServicesSection() {
   const selectService = (index: number) => {
     setActiveService(index)
     window.history.replaceState(null, "", `#${["servicio-analitico", "servicio-regulatorio", "servicio-especial"][index]}`)
-    window.requestAnimationFrame(() => {
+    window.setTimeout(() => {
       const panel = document.getElementById(`service-panel-${index}`)
       if (!panel) return
-      if (index === 0) {
-        const headerOffset = Number.parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--site-header-offset")) || 0
-        const target = window.scrollY + panel.getBoundingClientRect().top - headerOffset + 24
-        window.scrollTo({ top: Math.max(0, target), behavior: "smooth" })
-        return
-      }
-      panel.scrollIntoView({ behavior: "smooth", block: "start" })
-    })
+      const headerOffset = document.querySelector("header")?.getBoundingClientRect().height || 0
+      const target = window.scrollY + panel.getBoundingClientRect().top - headerOffset - 16
+      window.scrollTo({ top: Math.max(0, target), behavior: "smooth" })
+    }, 120)
   }
 
   return (
@@ -101,7 +97,7 @@ export function ServicesSection() {
         <span className="mx-auto mt-5 block h-px w-20 bg-background/40" />
       </div>
 
-      <div className="mx-auto w-full max-w-6xl px-4 pb-16 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-6xl px-[var(--content-gutter)] pb-[var(--section-space)]">
         <div id="servicios-cards" className="scroll-mt-24 grid gap-4 md:grid-cols-3" role="tablist" aria-label="Servicios de Serlab">
           {panels.map((panel, index) => {
             const isActive = activeService === index
@@ -118,7 +114,7 @@ export function ServicesSection() {
           })}
         </div>
 
-        <div id={`service-panel-${activeService}`} role="tabpanel" aria-live="polite" className={`mt-10 ${activeService === 0 ? "scroll-mt-[calc(var(--site-header-offset)+0.75rem)]" : "scroll-mt-[var(--site-header-offset)]"} overflow-hidden rounded-3xl border border-accent/40 bg-background p-[clamp(1rem,3vw,1.75rem)] text-foreground shadow-xl`}>
+        <div id={`service-panel-${activeService}`} role="tabpanel" aria-live="polite" className="mt-[clamp(2.5rem,7vw,5rem)] scroll-mt-[calc(var(--site-header-offset)+1rem)] overflow-hidden rounded-3xl border border-accent/40 bg-background p-[clamp(1rem,3vw,1.75rem)] text-foreground shadow-xl">
           <div key={activeService} className="animate-service-detail">
             <div className="mb-5 border-b border-border pb-5">
               <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Servicio seleccionado</p>

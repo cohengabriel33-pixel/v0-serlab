@@ -55,7 +55,7 @@ function Hexagon({ image, name }: { image: string; name: string }) {
 
   return (
     <div
-      className="relative aspect-[8/9] w-[clamp(7rem,32vw,8rem)] bg-primary p-1"
+      className="relative h-36 w-32 shrink-0 bg-primary p-1 sm:h-40 sm:w-36"
       style={{ clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)" }}
     >
       <img
@@ -79,7 +79,7 @@ function MemberCard({ member }: { member: Member }) {
 
       <button
         onClick={() => setOpen((v) => !v)}
-        className="mt-3 flex w-full max-w-xs items-center justify-between rounded-sm bg-primary px-4 py-2.5 text-left text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+        className="mt-3 flex h-10 w-full max-w-xs items-center justify-between rounded-sm bg-primary px-4 py-2.5 text-left text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
         aria-expanded={open}
       >
         <span>{member.name}</span>
@@ -122,7 +122,7 @@ export function TeamSection() {
       style={{ backgroundImage: "url('/team-bg.png')" }}
     >
       <div className="absolute inset-0 bg-background/80" aria-hidden="true" />
-      <div className="relative mx-auto max-w-6xl px-4">
+      <div className="relative mx-auto w-full max-w-6xl px-[var(--content-gutter)]">
         <div className="mb-12 text-center">
           <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Nuestro equipo</p>
           <h2 className="mt-3 font-heading text-[clamp(2.25rem,6vw,3rem)] font-light text-foreground">
