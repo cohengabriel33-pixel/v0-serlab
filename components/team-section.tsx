@@ -55,7 +55,7 @@ function Hexagon({ image, name }: { image: string; name: string }) {
 
   return (
     <div
-      className="relative aspect-[8/9] w-[clamp(7rem,32vw,8rem)] bg-primary p-1"
+      className="relative h-36 w-32 shrink-0 bg-primary p-1 sm:h-40 sm:w-36"
       style={{ clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)" }}
     >
       <img
