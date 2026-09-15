@@ -131,6 +131,8 @@
     @apply bg-background text-foreground;
     min-width: 320px;
     text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   html {
     @apply font-sans;
@@ -151,6 +153,14 @@
     display: block;
     max-width: 100%;
   }
+  img {
+    height: auto;
+  }
+  input,
+  textarea,
+  select {
+    max-width: 100%;
+  }
   button,
   a {
     -webkit-tap-highlight-color: transparent;
@@ -164,6 +174,16 @@
   @media (max-width: 1023px) {
     :root {
       --site-header-offset: 4.5rem;
+    }
+  }
+  @supports not (overflow: clip) {
+    main {
+      overflow-x: hidden;
+    }
+  }
+  @supports not (scroll-padding-top: 1px) {
+    [id] {
+      scroll-margin-top: var(--site-header-offset);
     }
   }
   @media (prefers-reduced-motion: reduce) {
