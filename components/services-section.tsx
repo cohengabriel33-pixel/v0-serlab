@@ -65,11 +65,13 @@ export function ServicesSection() {
       if (index === undefined) return
       setActiveService(index)
       window.requestAnimationFrame(() => {
-        const panel = document.getElementById(`service-panel-${index}`)
-        if (!panel) return
-        const headerOffset = Number.parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--site-header-offset")) || 0
-        const target = window.scrollY + panel.getBoundingClientRect().top - headerOffset - 16
-        window.scrollTo({ top: Math.max(0, target), behavior: "auto" })
+        window.requestAnimationFrame(() => {
+          const panel = document.getElementById(`service-panel-${index}`)
+          if (!panel) return
+          const headerOffset = document.querySelector("header")?.getBoundingClientRect().height || 0
+          const target = window.scrollY + panel.getBoundingClientRect().top - headerOffset - 16
+          window.scrollTo({ top: Math.max(0, target), behavior: "auto" })
+        })
       })
     }
     syncServiceFromHash()
@@ -81,11 +83,13 @@ export function ServicesSection() {
     setActiveService(index)
     window.history.replaceState(null, "", `#${["servicio-analitico", "servicio-regulatorio", "servicio-especial"][index]}`)
     window.requestAnimationFrame(() => {
-      const panel = document.getElementById(`service-panel-${index}`)
-      if (!panel) return
-      const headerOffset = Number.parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--site-header-offset")) || 0
-      const target = window.scrollY + panel.getBoundingClientRect().top - headerOffset - 16
-      window.scrollTo({ top: Math.max(0, target), behavior: "smooth" })
+      window.requestAnimationFrame(() => {
+        const panel = document.getElementById(`service-panel-${index}`)
+        if (!panel) return
+        const headerOffset = document.querySelector("header")?.getBoundingClientRect().height || 0
+        const target = window.scrollY + panel.getBoundingClientRect().top - headerOffset - 16
+        window.scrollTo({ top: Math.max(0, target), behavior: "smooth" })
+      })
     })
   }
 
