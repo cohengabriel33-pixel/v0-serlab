@@ -64,15 +64,13 @@ export function ServicesSection() {
       const index = hashToIndex[window.location.hash]
       if (index === undefined) return
       setActiveService(index)
-      window.requestAnimationFrame(() => {
-        window.requestAnimationFrame(() => {
-          const panel = document.getElementById(`service-panel-${index}`)
-          if (!panel) return
-          const headerOffset = document.querySelector("header")?.getBoundingClientRect().height || 0
-          const target = window.scrollY + panel.getBoundingClientRect().top - headerOffset - 16
-          window.scrollTo({ top: Math.max(0, target), behavior: "auto" })
-        })
-      })
+      window.setTimeout(() => {
+        const panel = document.getElementById(`service-panel-${index}`)
+        if (!panel) return
+        const headerOffset = document.querySelector("header")?.getBoundingClientRect().height || 0
+        const target = window.scrollY + panel.getBoundingClientRect().top - headerOffset - 16
+        window.scrollTo({ top: Math.max(0, target), behavior: "auto" })
+      }, 120)
     }
     syncServiceFromHash()
     window.addEventListener("hashchange", syncServiceFromHash)
@@ -82,15 +80,13 @@ export function ServicesSection() {
   const selectService = (index: number) => {
     setActiveService(index)
     window.history.replaceState(null, "", `#${["servicio-analitico", "servicio-regulatorio", "servicio-especial"][index]}`)
-    window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        const panel = document.getElementById(`service-panel-${index}`)
-        if (!panel) return
-        const headerOffset = document.querySelector("header")?.getBoundingClientRect().height || 0
-        const target = window.scrollY + panel.getBoundingClientRect().top - headerOffset - 16
-        window.scrollTo({ top: Math.max(0, target), behavior: "smooth" })
-      })
-    })
+    window.setTimeout(() => {
+      const panel = document.getElementById(`service-panel-${index}`)
+      if (!panel) return
+      const headerOffset = document.querySelector("header")?.getBoundingClientRect().height || 0
+      const target = window.scrollY + panel.getBoundingClientRect().top - headerOffset - 16
+      window.scrollTo({ top: Math.max(0, target), behavior: "smooth" })
+    }, 120)
   }
 
   return (
@@ -101,7 +97,7 @@ export function ServicesSection() {
         <span className="mx-auto mt-5 block h-px w-20 bg-background/40" />
       </div>
 
-      <div className="mx-auto w-full max-w-6xl px-4 pb-16 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-6xl px-[var(--content-gutter)] pb-[var(--section-space)]">
         <div id="servicios-cards" className="scroll-mt-24 grid gap-4 md:grid-cols-3" role="tablist" aria-label="Servicios de Serlab">
           {panels.map((panel, index) => {
             const isActive = activeService === index

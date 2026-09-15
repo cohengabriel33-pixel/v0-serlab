@@ -39,8 +39,8 @@ function LogoSet() {
 
 export function ClientsSection() {
   return (
-    <section id="clientes" className="overflow-hidden bg-background py-20 sm:py-24">
-      <div className="mx-auto max-w-6xl px-6 text-center">
+    <section id="clientes" className="overflow-hidden bg-background py-[var(--section-space)]">
+      <div className="mx-auto w-full max-w-6xl px-[var(--content-gutter)] text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary">Confían en nosotros</p>
         <h2 className="mt-3 font-heading text-4xl font-light text-foreground sm:text-5xl">
           Nuestros <span className="italic text-primary">clientes</span>

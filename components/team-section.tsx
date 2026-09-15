@@ -122,7 +122,7 @@ export function TeamSection() {
       style={{ backgroundImage: "url('/team-bg.png')" }}
     >
       <div className="absolute inset-0 bg-background/80" aria-hidden="true" />
-      <div className="relative mx-auto max-w-6xl px-4">
+      <div className="relative mx-auto w-full max-w-6xl px-[var(--content-gutter)]">
         <div className="mb-12 text-center">
           <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Nuestro equipo</p>
           <h2 className="mt-3 font-heading text-[clamp(2.25rem,6vw,3rem)] font-light text-foreground">
