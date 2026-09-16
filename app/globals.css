@@ -286,41 +286,42 @@
   animation: service-detail-in 500ms ease-out both;
 }
 
-@-webkit-keyframes marquee {
-  0% {
+@-webkit-keyframes marquee-v2 {
+  from {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
-  100% {
+  to {
     -webkit-transform: translate3d(-50%, 0, 0);
     transform: translate3d(-50%, 0, 0);
   }
 }
 
-@keyframes marquee {
-  0% {
+@keyframes marquee-v2 {
+  from {
     transform: translate3d(0, 0, 0);
   }
-  100% {
+  to {
     transform: translate3d(-50%, 0, 0);
   }
 }
 
-.animate-marquee-infinite {
+.animate-marquee-infinite-v2 {
   display: flex;
   width: max-content;
+  min-width: max-content;
   flex-shrink: 0;
-  -webkit-animation: marquee 25s linear infinite;
-  animation: marquee 25s linear infinite;
+  -webkit-animation: marquee-v2 25s linear infinite;
+  animation: marquee-v2 25s linear infinite;
   -webkit-animation-play-state: running;
   animation-play-state: running;
   will-change: transform;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-marquee-infinite {
-    -webkit-animation: marquee 25s linear infinite !important;
-    animation: marquee 25s linear infinite !important;
+  .animate-marquee-infinite-v2 {
+    -webkit-animation: marquee-v2 25s linear infinite !important;
+    animation: marquee-v2 25s linear infinite !important;
     -webkit-animation-play-state: running !important;
     animation-play-state: running !important;
   }
