@@ -286,20 +286,44 @@
   animation: service-detail-in 500ms ease-out both;
 }
 
-@keyframes marquee {
+@-webkit-keyframes marquee {
   0% {
-    transform: translateX(0%);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translateX(-50%);
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
 .animate-marquee-infinite {
   display: flex;
   width: max-content;
-  animation: marquee 25s linear infinite !important;
+  flex-shrink: 0;
+  -webkit-animation: marquee 25s linear infinite;
+  animation: marquee 25s linear infinite;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
   will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-infinite {
+    -webkit-animation: marquee 25s linear infinite !important;
+    animation: marquee 25s linear infinite !important;
+    -webkit-animation-play-state: running !important;
+    animation-play-state: running !important;
+  }
 }
 
 @keyframes campus-shine {
