@@ -306,11 +306,12 @@
   }
 }
 
-.animate-marquee-infinite-v3 {
+.animate-marquee {
   display: flex;
   width: max-content;
   min-width: max-content;
   flex-shrink: 0;
+  flex-wrap: nowrap;
   -webkit-animation: marquee-v3 30s linear infinite;
   animation: marquee-v3 30s linear infinite;
   -webkit-animation-play-state: running;
@@ -319,7 +320,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-marquee-infinite-v3 {
+  .animate-marquee {
     -webkit-animation: marquee-v3 30s linear infinite !important;
     animation: marquee-v3 30s linear infinite !important;
     -webkit-animation-play-state: running !important;

@@ -27,7 +27,7 @@ const logos = [
 
 function LogoSet() {
   return (
-    <div className="flex shrink-0 items-center gap-x-8" aria-hidden="true">
+    <div className="flex shrink-0 flex-nowrap items-center gap-x-8" aria-hidden="true">
       {logos.map(([name, src]) => (
         <div key={name} className="flex h-[clamp(7rem,18vw,8rem)] w-[clamp(12rem,30vw,14rem)] shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-border bg-card px-4 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-md sm:px-5">
           <Image src={src} alt={`Logo de ${name}`} width={180} height={100} className="max-h-16 w-auto max-w-[92%] object-contain mix-blend-multiply dark:mix-blend-normal sm:max-h-20" style={{ transform: `scale(${name === "Braun Sharing Expertise" ? 0.78 : ["Deltabiotech", "LKM", "Techsphere", "Savant", "Bausch + Lomb", "Aspen"].includes(name) ? 1.75 : 1.12})` }} />
@@ -50,7 +50,7 @@ export function ClientsSection() {
         </p>
       </div>
       <div className="relative mt-12 flex w-full overflow-hidden before:absolute before:inset-y-0 before:left-0 before:z-10 before:w-24 before:bg-gradient-to-r before:from-background before:to-transparent after:absolute after:inset-y-0 after:right-0 after:z-10 after:w-24 after:bg-gradient-to-l after:from-background after:to-transparent">
-        <div className="animate-marquee-infinite-v3 flex w-max shrink-0 gap-x-8">
+        <div className="animate-marquee flex w-max shrink-0 flex-nowrap gap-x-8">
           <LogoSet />
           <LogoSet />
         </div>
