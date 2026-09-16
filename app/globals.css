@@ -286,20 +286,45 @@
   animation: service-detail-in 500ms ease-out both;
 }
 
-@keyframes marquee {
-  0% {
-    transform: translateX(0%);
+@-webkit-keyframes marquee-v3 {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
-  100% {
-    transform: translateX(-50%);
+  to {
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
-.animate-marquee-infinite {
+@keyframes marquee-v3 {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee-infinite-v3 {
   display: flex;
   width: max-content;
-  animation: marquee 25s linear infinite !important;
+  min-width: max-content;
+  flex-shrink: 0;
+  -webkit-animation: marquee-v3 30s linear infinite;
+  animation: marquee-v3 30s linear infinite;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
   will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-infinite-v3 {
+    -webkit-animation: marquee-v3 30s linear infinite !important;
+    animation: marquee-v3 30s linear infinite !important;
+    -webkit-animation-play-state: running !important;
+    animation-play-state: running !important;
+  }
 }
 
 @keyframes campus-shine {
